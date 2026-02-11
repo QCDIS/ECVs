@@ -1,0 +1,13 @@
+{
+  "shell_port": 34739,
+  "iopub_port": 39429,
+  "stdin_port": 42915,
+  "control_port": 40181,
+  "hb_port": 42813,
+  "ip": "127.0.0.1",
+  "key": "b16c6e0b-bbcc1fc5a861f9230f00c002",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "conda-env-ecvs-py",
+  "jupyter_session": "/home/jovyan/01-Access-AnaEE_Weather_Data-d792e11c-9a9c-4ecc-8304-c40bdefd70e0.ipynb"
+}

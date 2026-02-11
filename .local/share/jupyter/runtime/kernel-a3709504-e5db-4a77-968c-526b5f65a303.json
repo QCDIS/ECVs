@@ -1,0 +1,13 @@
+{
+  "shell_port": 37685,
+  "iopub_port": 34861,
+  "stdin_port": 33615,
+  "control_port": 51679,
+  "hb_port": 52255,
+  "ip": "127.0.0.1",
+  "key": "45632fa0-bc3e716785ecef515239de96",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "conda-env-ecvs-py",
+  "jupyter_session": "/home/jovyan/02-Access-Argo_Data-770e04d0-8a59-400d-b563-8ae910bbbeb5.ipynb"
+}
