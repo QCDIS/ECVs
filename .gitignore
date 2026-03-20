@@ -209,6 +209,6 @@ __marimo__/
 .cache/
 .config/
 .ipython/
-# .jupyter/
-# .local/
-# .vscode/
+.jupyter/
+.local/
+.vscode/
