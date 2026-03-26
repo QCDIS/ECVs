@@ -1,3 +1,8 @@
+import re
+import requests
+import json
+
+
 # Define function Web Service Request
 # =====
 
@@ -44,7 +49,7 @@ def call_restful_api(function, data={}, base_url="", key="", method='GET'):
     if method == 'POST':
         response = requests.post(base_url + '/' + function, data=payload, headers=headers)
     else:
-        response=requests.get(base_url + '/' + function, data=payload, headers=headers)
+        response = requests.get( base_url + '/' + function, data=payload, headers=headers)
     if response.status_code == 200: # the 200 status means 'success'
         try:
             return response.json() 
