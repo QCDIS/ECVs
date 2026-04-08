@@ -105,29 +105,3 @@ In the ENVRI-Hub context, recommended modes are either "standard" (default confi
 Data can be output in several format such as dataframes or datasets:
 + `DataFetcher().profile(6902746, 34).to_dataframe()`
 + `DataFetcher().profile(6902746, 34).to_xarray()`
-
-
-# ENVRI HUB library usage
-In this notebook we'll showcase the intended usage of the *VRE-Lib* component developed by WP 13 and WP 14.
-The VRE-Lib is available as a *Python package* on the [public package index](https://pypi.org/project/envrihub/) un the *envrihub* name.
-This means it can be installed with:
-
-That is the only thing you need to search, retrieve, and access resources listed on the Envri-Hub catalogue.
-## Searh for resources in the catalogue
-Let's begin from the search task, although we recommend doing it throught the [COS Web UI](	https://catalogue.staging.envri.eu/), you can script it too with the Hub's `search_catalogue` method.
-Let's demonstrate it's usage.
-
-### Free text search
-The most basic type of search you can perform is a *free text* one, much like you would do in any search engine.
-
-The `search_catalogue` method always return a *Generator* object, i.e. somthing you can iterate on, so you can process search results one by one as they get fetched from the catalogue.
-
-Each result has the shape of a `Distribution` object, containing anything you need to work with that resource, including the data access logic. We'll see that in the detail later, for now it's enough to know that all of them have an `id` that is unique in the Catalogue and there are two types of them: *Web Services*, and *Downloadable Files*.
-
-### Spatial coverage search
-We can query the catalogue also by specifying a region of interest. Such a region can be expressed as a WKT string, a format used by most GIS applications, so you can copy-paste spatial information from your GIS of choice and shove it straight into the `search_catalogue` function.
-
-### EXV and temporal coverage
-We can think of other kinds of facets, like time boundaries, or specific variables of intersest.
-The `exv` field accepts as value any of the [known EXVs](https://catalogue.staging.envri.eu/api/v1/resources/exvs) in the ENVRI-Hub catalogue 
-
