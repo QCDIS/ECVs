@@ -37,7 +37,8 @@ from datetime import datetime
 conf_vlab_name     = "ECVs"
 conf_workflow_name = "AnaEE"
 
-conf_workflow_id = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
+# conf_workflow_id = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
+param_workflow_name = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
 
 # dev
 # -----
@@ -50,6 +51,10 @@ conf_workflow_id = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
 # dir_data = os.path.join("/", "home", "jovyan", "Cloud Storage", "naa-vre-user-data")
 # if not os.path.exists(dir_data):
 #     os.makedirs(dir_data)
+
+# conf_dir_code  = os.path.join(dir_code, "ECVs", "Git public", "library")
+# conf_dir_data  = os.path.join(dir_data, "ECVs", param_workflow_name)
+# conf_dir_param = os.path.join(dir_data, "ECVs", param_workflow_name)
 
 # local
 # -----
@@ -70,21 +75,86 @@ conf_minio_user_bucket        = "naa-vre-user-data"
 conf_minio_user_bucket_root   = conf_vlab_name
 conf_minio_user_local_root    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root)
 conf_minio_user_local_code    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root,   "library")
-conf_minio_user_local_data    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root,   f"{conf_workflow_name}-{conf_workflow_id}")
+conf_minio_user_local_data    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root,   f"{conf_workflow_name}-{param_workflow_name}")
 conf_minio_user_local_flog    = os.path.join(conf_minio_user_local_data, "log.md")
 
 # API key
 # -----
 # If running under NaaVRE, input `your api key` with the correct value and input in the GUI:
-secret_SERVICE_KEY = ""
+secret_SERVICE_KEY = "d18e08911c964d45912eb1e954adf994"
 # secret_SERVICE_KEY = SecretsProvider().set_secret("secret_SERVICE_KEY")
 # secret_SERVICE_KEY = SecretsProvider().get_secret("secret_SERVICE_KEY")
 
 # Input param
 # -----
-conf_args = ""
+# CREA AA Italian historical weather series
+# https://api.anaee.eu/crea-aa-dailymeteo/
+conf_SERVICE_URL_CREA    = 'https://api.anaee.eu/crea-aa-dailymeteo'
+conf_SERVICE_METHOD_CREA = "POST"
 
-param_variable = ""
+# An API to access CREA's mirror of the Copernicus ERA5 dataset
+# https://api.anaee.eu/era5-data-access
+conf_SERVICE_URL_ERA5    = 'https://api.anaee.eu/era5-data-access'
+conf_SERVICE_METHOD_ERA5 = "POST"
+
+# param_polygon_string = ""
+param_polygon_string = "" \
+"POLYGON(" \
+    "(" \
+    "10.15905865446625 43.58782080564057," \
+    "10.20849713102875 44.29581102576821," \
+    "9.23071392790375 44.73060761735282," \
+    "7.709107482591251 44.45678937969159," \
+    "7.385010802903751 43.72294797699299," \
+    "10.15905865446625 43.58782080564057" \
+    ")" \
+")"
+
+param_crea_request_getStationData    = "getStationData"
+param_crea_start_date_getStationData = "2022-06-14"
+param_crea_end_date_getStationData   = "2022-06-20"
+param_crea_timestep_getStationData   = "hour"
+# input_crea_data_getStationData = {
+#     "startTime": param_crea_start_date_getStationData,
+#     "endTime":   param_crea_end_date_getStationData,
+#     "timeStep":  param_crea_timestep_getStationData,
+#     "wkt":       param_polygon_string
+# }
+
+param_crea_request_getRasterData    = "getRasterData"
+param_crea_start_date_getRasterData = "2002-06-14"
+param_crea_end_date_getRasterData   = "2002-06-20"
+param_crea_timestep_getRasterData   = "day"
+# input_crea_data_getRasterData = {
+#     "startTime": param_crea_start_date_getRasterData,
+#     "endTime":   param_crea_end_date_getRasterData,
+#     "timeStep":  param_crea_timestep_getRasterData,
+#     "wkt":       param_polygon_string,
+#     "group":     "sian"
+# }
+
+param_crea_request_getNearestStationData    = "getNearestStationData"
+param_crea_start_date_getNearestStationData = "2021-06-14"
+param_crea_end_date_getNearestStationData   = "2021-06-20"
+param_crea_timestep_getNearestStationData   = "hour"
+# conf_crea_data_getNearestStationData = {
+#     "startTime": param_crea_start_date_getNearestStationData,
+#     "endTime":   param_crea_end_date_getNearestStationData,
+#     "timeStep":  param_crea_timestep_getNearestStationData,
+#     "wkt":       "POINT(9.3 44.5)",
+#     "limit":     1
+# }
+
+param_era5_request_GetEraData    = "GetEraData"
+param_era5_start_date_GetEraData = "2022-06-14"
+param_era5_end_date_GetEraData   = "2022-06-20"
+param_era5_timestep_GetEraData   = "hour"
+# input_era5_data_GetEraData = {
+#     "startTime": param_era5_start_date_GetEraData,
+#     "endTime":   param_era5_end_date_GetEraData,
+#     "timeStep":  param_era5_timestep_GetEraData,
+#     "wkt":       param_polygon_string
+# }
 
 print("Finish: NaaVRE parameters")
 print(f"Workspace public:")
@@ -100,6 +170,7 @@ print(f"  Log:  {conf_minio_user_local_flog}")
 
 # func_call_restful_api = anaee_api.call_restful_api()
 # func_parse_wkt_point  = anaee_api.parse_wkt_point()
+
 ```
 
 ## <a name='execcell'></a>exec cell
@@ -135,7 +206,7 @@ if not os.path.exists(conf_minio_user_local_data):
     os.makedirs(conf_minio_user_local_data)
     
 with open(conf_minio_user_local_flog, "w+") as fp_log:
-    fp_log.write(f"# {conf_workflow_id}\n")
+    fp_log.write(f"# {param_workflow_name}\n")
 
 # create log
 # .....
