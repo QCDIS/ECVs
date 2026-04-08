@@ -87,14 +87,16 @@ conf_args = ""
 param_variable = ""
 
 print("Finish: NaaVRE parameters")
-print(f"Workspace public: {conf_minio_public_local_root}")
-print(f"  {conf_minio_public_local_code}")
-print(f"  {conf_minio_public_local_data}")
+print(f"Workspace public:")
+print(f"  Root: {conf_minio_public_local_root}")
+print(f"  Code: {conf_minio_public_local_code}")
+print(f"  Data: {conf_minio_public_local_data}")
 
-print(f"Workspace user: {conf_minio_user_local_root}")
-print(f"  {conf_minio_user_local_code}")
-print(f"  {conf_minio_user_local_data}")
-print(f"  {conf_minio_user_local_flog}")
+print(f"Workspace user:")
+print(f"  Root: {conf_minio_user_local_root}")
+print(f"  Code: {conf_minio_user_local_code}")
+print(f"  Data: {conf_minio_user_local_data}")
+print(f"  Log:  {conf_minio_user_local_flog}")
 
 # func_call_restful_api = anaee_api.call_restful_api()
 # func_parse_wkt_point  = anaee_api.parse_wkt_point()
