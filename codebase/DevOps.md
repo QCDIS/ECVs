@@ -210,6 +210,7 @@ with open(conf_minio_user_local_flog, "w+") as fp_log:
 
 # create log
 # .....
+print(param_workflow_name)
 workflow_step = "ECVs-Start"
 
 if os.path.exists(conf_minio_user_local_flog):
