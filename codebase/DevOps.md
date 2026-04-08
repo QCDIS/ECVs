@@ -160,7 +160,7 @@ dummy_cell_arg_o = "dummy output"
 # -----
 with open(conf_minio_user_local_flog, "a+") as fp_log:
     fp_log.write(f"\nFinish: {workflow_step}\n")
-    fp_log.write(f"\nOutput: {file_seq_zip}\n")
+    fp_log.write(f"\nOutput: {conf_minio_user_local_data}\n")
 
 print(f"Finish: {workflow_step}")
 ```
