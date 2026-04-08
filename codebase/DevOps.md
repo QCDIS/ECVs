@@ -81,6 +81,7 @@ if not os.path.exists(conf_minio_user_local_root):
 
 if not os.path.exists(conf_minio_user_local_data):
     os.makedirs(conf_minio_user_local_data)
+
 with open(conf_minio_user_local_flog, "w+") as fp_log:
     fp_log.write(f"# {conf_workflow_id}\n") 
 
