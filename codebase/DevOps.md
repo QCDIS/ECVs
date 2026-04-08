@@ -66,8 +66,6 @@ conf_minio_public_bucket_root = f"vl-{conf_vlab_name.lower()}"
 conf_minio_public_local_root  = os.path.join(conf_dir_workspace, conf_minio_public_bucket, conf_minio_public_bucket_root)
 conf_minio_public_local_code  = os.path.join(conf_dir_workspace, conf_minio_public_bucket, conf_minio_public_bucket_root, "code")
 conf_minio_public_local_data  = os.path.join(conf_dir_workspace, conf_minio_public_bucket, conf_minio_public_bucket_root, "data", conf_workflow_name)
-# if not os.path.exists(conf_minio_public_local_root):
-#     os.makedirs(conf_minio_public_local_root)
 
 conf_minio_user_bucket        = "naa-vre-user-data"
 # conf_minio_user_bucket_root   = param_user_email
@@ -76,14 +74,6 @@ conf_minio_user_local_root    = os.path.join(conf_dir_workspace, conf_minio_user
 conf_minio_user_local_code    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root,   "library")
 conf_minio_user_local_data    = os.path.join(conf_dir_workspace, conf_minio_user_bucket,   conf_minio_user_bucket_root,   f"{conf_workflow_name}-{conf_workflow_id}")
 conf_minio_user_local_flog    = os.path.join(conf_minio_user_local_data, "log.md")
-if not os.path.exists(conf_minio_user_local_root):
-    os.makedirs(conf_minio_user_local_root)
-
-if not os.path.exists(conf_minio_user_local_data):
-    os.makedirs(conf_minio_user_local_data)
-
-with open(conf_minio_user_local_flog, "w+") as fp_log:
-    fp_log.write(f"# {conf_workflow_id}\n") 
 
 # API key
 # -----
@@ -157,6 +147,17 @@ dummy_cell_arg_o = "dummy output"
 
 # start
 # -----
+# if not os.path.exists(conf_minio_public_local_root):
+#     os.makedirs(conf_minio_public_local_root)
+
+if not os.path.exists(conf_minio_user_local_root):
+    os.makedirs(conf_minio_user_local_root)
+
+if not os.path.exists(conf_minio_user_local_data):
+    os.makedirs(conf_minio_user_local_data)
+    
+with open(conf_minio_user_local_flog, "w+") as fp_log:
+    fp_log.write(f"# {conf_workflow_id}\n") 
 
 # -----
 with open(conf_minio_user_local_flog, "a+") as fp_log:
