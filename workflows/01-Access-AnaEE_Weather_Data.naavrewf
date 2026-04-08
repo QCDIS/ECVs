@@ -745,11 +745,11 @@
           "height": 61
         }
       },
-      "56a37f51-6a86-4ce2-bb2b-de4d754f01c5": {
-        "id": "56a37f51-6a86-4ce2-bb2b-de4d754f01c5",
+      "0c7b9b76-4f9c-48d6-8206-0409df27762c": {
+        "id": "0c7b9b76-4f9c-48d6-8206-0409df27762c",
         "position": {
-          "x": 345.6571196698993,
-          "y": 1469.5217853347494
+          "x": 361.5976085115568,
+          "y": 1474.8352816153024
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -769,7 +769,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/c1f2dd60-7ecf-473b-b90f-927c3a0654fa/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/b167d022-29af-4871-af32-a4db1e02a2ff/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -779,11 +779,6 @@
               "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.14"
             },
             "dependencies": [
-              {
-                "name": "datetime",
-                "module": "datetime",
-                "asname": null
-              },
               {
                 "name": "os",
                 "module": "",
@@ -799,32 +794,38 @@
             ],
             "confs": [
               {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
                 "name": "conf_minio_user_local_root",
                 "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
               },
               {
                 "name": "conf_minio_user_local_data",
-                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', f\"\"\"{'AnaEE'}-{f\"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}\"}\"\"\")"
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', f\"{'AnaEE'}-{param_workflow_name}\")"
               },
               {
                 "name": "conf_minio_user_local_flog",
-                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', f\"\"\"{'AnaEE'}-{f\"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}\"}\"\"\"), 'log.md')"
-              },
-              {
-                "name": "conf_workflow_id",
-                "assignation": "conf_workflow_id = f\"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}\""
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', f\"{'AnaEE'}-{param_workflow_name}\"), 'log.md')"
               }
             ],
-            "params": [],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "f\"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}\""
+              }
+            ],
             "secrets": [],
             "title": "ecvs-workflow-start-quan-pan-lifewatch-eu",
             "description": "ecvs-workflow-start-quan-pan-lifewatch-eu",
-            "created": "2026-04-08T12:11:02.433627Z",
-            "modified": "2026-04-08T12:11:02.767967Z",
-            "version": 7,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-start-quan-pan-lifewatch-eu:cacbb4f",
+            "created": "2026-04-08T13:17:54.913561Z",
+            "modified": "2026-04-08T13:17:55.405160Z",
+            "version": 8,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-start-quan-pan-lifewatch-eu:e4df325",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/83d974b9e74501223cb1e78ad252e8a9ed5b1cc1/ecvs-workflow-start-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/a000afbf7b5c6556d5c7c9227e8244424a5b7d6b/ecvs-workflow-start-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
@@ -880,10 +881,10 @@
           "portId": "dummy_cell_arg_i"
         }
       },
-      "8f0e2068-7d7c-4501-b46e-0a0f83cc072a": {
-        "id": "8f0e2068-7d7c-4501-b46e-0a0f83cc072a",
+      "85f1950e-6380-47e7-8b90-ecea80c53904": {
+        "id": "85f1950e-6380-47e7-8b90-ecea80c53904",
         "from": {
-          "nodeId": "56a37f51-6a86-4ce2-bb2b-de4d754f01c5",
+          "nodeId": "0c7b9b76-4f9c-48d6-8206-0409df27762c",
           "portId": "dummy_cell_arg_o"
         },
         "to": {
@@ -891,10 +892,10 @@
           "portId": "dummy_cell_arg_i"
         }
       },
-      "c94b4921-8763-4228-ab69-7e56d03dcda1": {
-        "id": "c94b4921-8763-4228-ab69-7e56d03dcda1",
+      "b9fa0b83-9aa1-4606-b828-4f31a7b0a27a": {
+        "id": "b9fa0b83-9aa1-4606-b828-4f31a7b0a27a",
         "from": {
-          "nodeId": "56a37f51-6a86-4ce2-bb2b-de4d754f01c5",
+          "nodeId": "0c7b9b76-4f9c-48d6-8206-0409df27762c",
           "portId": "dummy_cell_arg_o"
         },
         "to": {
@@ -902,10 +903,10 @@
           "portId": "dummy_cell_arg_i"
         }
       },
-      "03c395a2-593f-43a9-98dd-d6c034907c11": {
-        "id": "03c395a2-593f-43a9-98dd-d6c034907c11",
+      "2e4270db-6215-4e21-a1da-8fc38d87cc84": {
+        "id": "2e4270db-6215-4e21-a1da-8fc38d87cc84",
         "from": {
-          "nodeId": "56a37f51-6a86-4ce2-bb2b-de4d754f01c5",
+          "nodeId": "0c7b9b76-4f9c-48d6-8206-0409df27762c",
           "portId": "dummy_cell_arg_o"
         },
         "to": {
@@ -913,10 +914,10 @@
           "portId": "dummy_cell_arg_i"
         }
       },
-      "557b1778-3636-46a6-9e2e-c6637abdd9d0": {
-        "id": "557b1778-3636-46a6-9e2e-c6637abdd9d0",
+      "c06cecd0-6e70-49e2-acad-203fa7f33945": {
+        "id": "c06cecd0-6e70-49e2-acad-203fa7f33945",
         "from": {
-          "nodeId": "56a37f51-6a86-4ce2-bb2b-de4d754f01c5",
+          "nodeId": "0c7b9b76-4f9c-48d6-8206-0409df27762c",
           "portId": "dummy_cell_arg_o"
         },
         "to": {
