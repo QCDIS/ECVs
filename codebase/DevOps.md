@@ -56,8 +56,6 @@ conf_workflow_id = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
 conf_dir_workspace = os.path.join("/", "home", "jovyan", "Cloud Storage")
 
 conf_dir_data_local_tmp = os.path.join("/", "tmp", "data")
-if not os.path.exists(conf_dir_data_local_tmp):
-    os.makedirs(conf_dir_data_local_tmp)
 
 # MINIO
 # -----
@@ -120,6 +118,25 @@ from datetime import datetime
 # sys.path.append(conf_minio_public_local_code)
 # sys.path.append(conf_minio_user_local_code)
 
+# prepare folders
+# .....
+if not os.path.exists(conf_dir_data_local_tmp):
+    os.makedirs(conf_dir_data_local_tmp)
+
+# if not os.path.exists(conf_minio_public_local_root):
+#     os.makedirs(conf_minio_public_local_root)
+
+if not os.path.exists(conf_minio_user_local_root):
+    os.makedirs(conf_minio_user_local_root)
+
+if not os.path.exists(conf_minio_user_local_data):
+    os.makedirs(conf_minio_user_local_data)
+    
+with open(conf_minio_user_local_flog, "w+") as fp_log:
+    fp_log.write(f"# {conf_workflow_id}\n")
+
+# create log
+# .....
 workflow_step = "ECVs-Start"
 
 if os.path.exists(conf_minio_user_local_flog):
@@ -147,17 +164,6 @@ dummy_cell_arg_o = "dummy output"
 
 # start
 # -----
-# if not os.path.exists(conf_minio_public_local_root):
-#     os.makedirs(conf_minio_public_local_root)
-
-if not os.path.exists(conf_minio_user_local_root):
-    os.makedirs(conf_minio_user_local_root)
-
-if not os.path.exists(conf_minio_user_local_data):
-    os.makedirs(conf_minio_user_local_data)
-    
-with open(conf_minio_user_local_flog, "w+") as fp_log:
-    fp_log.write(f"# {conf_workflow_id}\n") 
 
 # -----
 with open(conf_minio_user_local_flog, "a+") as fp_log:
