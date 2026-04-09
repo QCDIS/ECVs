@@ -1,19 +1,17 @@
 <!-- vscode-markdown-toc -->
-- [ECVs, ENVRI-HUB](#ecvs-envri-hub)
 - [Template cell](#template-cell)
   - [param cell](#param-cell)
   - [exec cell](#exec-cell)
-- [beacon](#beacon)
-  - [docker compose](#docker-compose)
-  - [api/info](#apiinfo)
+- [ECVs, ENVRI-HUB](#ecvs-envri-hub)
+  - [beacon](#beacon)
+    - [docker compose](#docker-compose)
+    - [api/info](#apiinfo)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
-
-# ECVs, ENVRI-HUB
 
 # Template cell
 
@@ -247,7 +245,9 @@ with open(conf_minio_user_local_flog, "a+") as fp_log:
 print(f"Finish: {workflow_step}")
 ```
 
-# <a name='beacon'></a>beacon
+# ECVs, ENVRI-HUB
+
+## <a name='beacon'></a>beacon
 
 Data lake query engine 
 
@@ -256,7 +256,7 @@ Data lake query engine
 * [beacon, Docs](https://maris-development.github.io/beacon/)
 * [Rust, shell](https://sh.rustup.rs)
 
-## <a name='dockercompose'></a>docker compose
+### <a name='dockercompose'></a>docker compose
 
 ```shell
 docker system prune -f
@@ -273,7 +273,7 @@ cd /beacon/data
 docker compose down
 ```
 
-## <a name='apiinfo'></a>api/info
+### <a name='apiinfo'></a>api/info
 
 Curl
 
