@@ -33,10 +33,10 @@ from datetime import datetime
 # base settings
 # -----
 conf_vlab_name     = "ECVs"
-conf_workflow_name = "AnaEE"
+# conf_workflow_name = "AnaEE"
 
 # conf_workflow_id = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
-param_workflow_name = f"wid-{datetime.now().strftime('%Y%m%d_%H%M%S%f')}"
+param_workflow_name = "workflow name"
 
 # dev
 # -----
@@ -155,16 +155,6 @@ param_era5_timestep_GetEraData   = "hour"
 # }
 
 print("Finish: NaaVRE parameters")
-print(f"Workspace public:")
-print(f"  Root: {conf_minio_public_local_root}")
-print(f"  Code: {conf_minio_public_local_code}")
-print(f"  Data: {conf_minio_public_local_data}")
-
-print(f"Workspace user:")
-print(f"  Root: {conf_minio_user_local_root}")
-print(f"  Code: {conf_minio_user_local_code}")
-print(f"  Data: {conf_minio_user_local_data}")
-print(f"  Log:  {conf_minio_user_local_flog}")
 
 # func_call_restful_api = anaee_api.call_restful_api()
 # func_parse_wkt_point  = anaee_api.parse_wkt_point()
@@ -243,6 +233,18 @@ with open(conf_minio_user_local_flog, "a+") as fp_log:
     fp_log.write(f"\nOutput: {conf_minio_user_local_data}\n")
 
 print(f"Finish: {workflow_step}")
+
+print(f"Workspace public:")
+print(f"  Root: {conf_minio_public_local_root}")
+print(f"  Code: {conf_minio_public_local_code}")
+print(f"  Data: {conf_minio_public_local_data}")
+
+print(f"Workspace user:")
+print(f"  Root: {conf_minio_user_local_root}")
+print(f"  Code: {conf_minio_user_local_code}")
+print(f"  Data: {conf_minio_user_local_data}")
+print(f"  Log:  {conf_minio_user_local_flog}")
+
 ```
 
 # ECVs, ENVRI-HUB

@@ -105,3 +105,5 @@ In the ENVRI-Hub context, recommended modes are either "standard" (default confi
 Data can be output in several format such as dataframes or datasets:
 + `DataFetcher().profile(6902746, 34).to_dataframe()`
 + `DataFetcher().profile(6902746, 34).to_xarray()`
+
+# ENVRI HUB library usage
