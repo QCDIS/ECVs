@@ -3,7 +3,6 @@
 | Abbreviation | Description                                                          |
 | ------------ | -------------------------------------------------------------------- |
 | ENVRI-HUB    | Data Portal of the European Environmental Research Infrastructures   |
-|   NERC       | Natural Environment Research Council, UK                             |
 |   AnaEE      | Analysis and Experimentation on Ecosystems                           |
 |   ERA5       | ECMWF Reanalysis v5 (ERA5)                                           |
 |   ARGO       | Real-time global ocean in situ observing system                      |
@@ -13,9 +12,16 @@
 |   ACTRIS     | Aerosol, Clouds, and Trace Gases Research Infrastructure             |
 |   IAGOS      | In-service Aircraft for a Global Observing System                    |
 |   EPOS       | European Plate Observing System                                      |
+| NERC         | Natural Environment Research Council, UK                             |
+|   I-ADOPT    | InteroperAble Descriptions of Observable Property                    |
 
 
 ## ENVRI-HUB
+
+### Services
+
+* [Search](https://search.envri.eu/search/genericpages/genericpages?page=home)
+* [Catalogue Of Services (COS)](https://catalogue.staging.envri.eu/)
 
 ### envrihub
 
@@ -23,18 +29,18 @@
 
 ### Methods
 
-* search_catalogue: Performs search on the ENVRI-Hub's catalogue
-* fetch_from_catalogue: Retrieves a specific resource from the ENVRI-Hub's catalogue
+* `search_catalogue`: Performs search on the ENVRI-Hub's catalogue
+* `fetch_from_catalogue`: Retrieves a specific resource from the ENVRI-Hub's catalogue
 
 ### Supports
 
 #### AnaEE
 
-Analysis and Experimentation on Ecosystems
+Analysis and Experimentation on Ecosystems, [API](https://developer.anaee.eu/apis)
 
 ##### getNearestStationData
 
-Return:
+Output:
 * seriesID
 * averageTemp
 * precipitation
@@ -42,7 +48,7 @@ Return:
 
 ##### getStationData
 
-Return:
+Output:
 * seriesID
 * averageTemp
 * maxTemp
@@ -61,7 +67,7 @@ Return:
 
 ##### getRasterData
 
-Return:
+Output:
 * seriesID
 * maxTemp
 * minTemp
@@ -70,16 +76,16 @@ Return:
 
 #### ARGO
 
-Real-time global ocean in situ observing system
+Real-time global ocean in situ observing system, [Data access](https://www.euro-argo.eu/Argo-Data-access)
 
 ##### Source
 
-* erddap: the Ifremer erddap server (Default)
-* gdac: an Argo GDAC server or any other GDAC-compliant local folder
-* argovis: the Argovis server
+* `erddap`: the Ifremer erddap server (Default)
+* `gdac`: an Argo GDAC server or any other GDAC-compliant local folder
+* `argovis`: the Argovis server
 
 ##### Dataset
 
-* phy: physical parameters
-* bgc: biogeochemical parameters
+* `phy`: physical parameters
+* `bgc`: biogeochemical parameters
 
