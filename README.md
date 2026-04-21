@@ -32,6 +32,7 @@ Analysis and Experimentation on Ecosystems
 
 ##### getNearestStationData
 
+Return:
 * seriesID
 * averageTemp
 * precipitation
@@ -39,6 +40,7 @@ Analysis and Experimentation on Ecosystems
 
 ##### getStationData
 
+Return:
 * seriesID
 * averageTemp
 * maxTemp
@@ -57,6 +59,7 @@ Analysis and Experimentation on Ecosystems
 
 ##### getRasterData
 
+Return:
 * seriesID
 * maxTemp
 * minTemp
