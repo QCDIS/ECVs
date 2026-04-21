@@ -25,11 +25,9 @@
 * [Search](https://search.envri.eu/search/genericpages/genericpages?page=home)
 * [Catalogue Of Services (COS)](https://catalogue.staging.envri.eu/)
 
-### envrihub
+### Library
 
 [ENVRI-Hub Python library](https://gitlab.a.incd.pt/envri-hub-next/vre-lib), streamline interaction with the ENVRI-Hub APIs, providing a pythonic facade to data and service access
-
-### Methods
 
 * `search_catalogue`: Performs search on the ENVRI-Hub's catalogue
 * `fetch_from_catalogue`: Retrieves a specific resource from the ENVRI-Hub's catalogue
