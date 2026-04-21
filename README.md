@@ -12,6 +12,8 @@
 |   CDI        | SeaDataNet Common Data Index (CDI) service                           |
 |   ACTRIS     | Aerosol, Clouds, and Trace Gases Research Infrastructure             |
 |   IAGOS      | In-service Aircraft for a Global Observing System                    |
+|   EPOS       | European Plate Observing System                                      |
+
 
 ## ENVRI-HUB
 
@@ -21,8 +23,8 @@
 
 ### Methods
 
-* search_catalogue
-* fetch_from_catalogue
+* search_catalogue: Performs search on the ENVRI-Hub's catalogue
+* fetch_from_catalogue: Retrieves a specific resource from the ENVRI-Hub's catalogue
 
 ### Supports
 
