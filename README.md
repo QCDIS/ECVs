@@ -40,11 +40,12 @@ Analysis and Experimentation on Ecosystems, [API](https://developer.anaee.eu/api
 
 ##### getNearestStationData
 
-Output:
-* seriesID
-* averageTemp
-* precipitation
-* elevation
+Example output:
+
+| date | seriesID | averageTemp | precipitation | idGroup | idCode | stationName | country | elevation | geography |
+| ---- | -------- | ----------- | ------------- | ------- | ------ | ----------- | ------- | --------- | --------- |
+| 2022-06-14 00:00:00+02:00 | 11 | 13.5 | 0.0 | regione-liguria | CABAN | Cabanne | IT | 809.0 | POINT (9.3408 44.4883) |
+
 
 ##### getStationData
 
