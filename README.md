@@ -91,46 +91,78 @@ Real-time global ocean in situ observing system, [Data access](https://www.euro-
 
 ## NERC
 
-ESV list
+### [ESV list](http://vocab.nerc.ac.uk/collection/EXV/current/)
 
 | ID | Preferred Label |
 | -- | --------------- |
+| [EXV049](https://gcos.wmo.int/en/essential-climate-variables/biomass) | Above-ground biomass |
 | [EXV016](https://gcos.wmo.int/en/essential-climate-variables/aerosols) | Aerosol properties |
 | [EXV047](https://gcos.wmo.int/en/essential-climate-variables/albedo) | Albedo |
-| [EXV049](https://gcos.wmo.int/en/essential-climate-variables/biomass) | Above-ground biomass |
+| [EXV053](https://gcos.wmo.int/en/essential-climate-variables/ghg-fluxes) | Anthropogenic greenhouse gas fluxes |
+| [EXV055](https://gcos.wmo.int/en/essential-climate-variables/water-use) | Anthropogenic water use |
+| [EXV068](https://goosocean.org/document/36269) | Benthic invertebrate abundance and distribution |
+| [EXV013](https://gcos.wmo.int/en/essential-climate-variables/ghg) | Carbon dioxide, methane and other greenhouse gases |
 | [EXV011](https://gcos.wmo.int/en/essential-climate-variables/clouds) | Cloud properties |
+| [EXV063](https://goosocean.org/document/17512) | Coral cover and composition |
 | [EXV010](https://gcos.wmo.int/en/essential-climate-variables/earth-radiation) | Earth radiation budget |
 | [EXV054](https://gcos.wmo.int/en/essential-climate-variables/evaporation) | Evaporation from land |
-| [EXV045](https://gcos.wmo.int/en/essential-climate-variables/fapar) | Fraction of absorbed PAR |
 | [EXV052](https://gcos.wmo.int/en/essential-climate-variables/fire) | Fire |
-| [EXV013](https://gcos.wmo.int/en/essential-climate-variables/ghg) | Carbon dioxide, methane and other greenhouse gases |
-| [EXV053](https://gcos.wmo.int/en/essential-climate-variables/ghg-fluxes) | Anthropogenic greenhouse gas fluxes |
+| [EXV059](https://goosocean.org/document/17510) | Fish abundance and distribution |
+| [EXV045](https://gcos.wmo.int/en/essential-climate-variables/fapar) | Fraction of absorbed PAR |
 | [EXV042](https://gcos.wmo.int/en/essential-climate-variables/glaciers) | Glaciers |
 | [EXV036](https://gcos.wmo.int/en/essential-climate-variables/groundwater) | Groundwater |
 | [EXV043](https://gcos.wmo.int/en/essential-climate-variables/ice-sheets-ice-shelves) | Ice sheets ad ice shelves |
-| [EXV046](https://gcos.wmo.int/en/essential-climate-variables/lai) | Leaf area index |
 | [EXV037](https://gcos.wmo.int/en/essential-climate-variables/lakes) | Lakes |
 | [EXV050](https://gcos.wmo.int/en/essential-climate-variables/land-cover) | Land cover |
 | [EXV048](https://gcos.wmo.int/en/essential-climate-variables/land-temperature) | Land-surface temperature |
+| [EXV046](https://gcos.wmo.int/en/essential-climate-variables/lai) | Leaf area index |
 | [EXV012](https://gcos.wmo.int/en/essential-climate-variables/lightning) | Lightning |
+| [EXV065](https://goosocean.org/document/17515) | Macroalgal canopy cover and composition |
+| [EXV066](https://goosocean.org/document/17514) | Mangrove cover and composition |
 | [EXV035](https://gcos.wmo.int/en/essential-climate-variables/marine-habitats/) | Marine habitat properties |
+| [EXV062](https://goosocean.org/document/36266) | Marine mammal abundance and distribution |
+| [EXV067](https://goosocean.org/document/36264) | Microbe biomass and diversity |
+| [EXV029](https://goosocean.org/document/17474) | Nutrients |
+| [EXV058](https://goosocean.org/document/32488) | Ocean bottom pressure |
+| [EXV033](https://goosocean.org/document/19959) | Ocean colour |
+| [EXV030](https://goosocean.org/document/17475) | Ocean inorganic carbon |
+| [EXV032](https://goosocean.org/document/17478) | Ocean nitrous oxide |
+| [EXV069](https://goosocean.org/document/22567) | Ocean sound |
+| [EXV026](https://goosocean.org/document/17472) | Ocean surface heat flux |
+| [EXV025](https://goosocean.org/document/17463) | Ocean surface stress |
+| [EXV028](https://goosocean.org/document/17473) | Oxygen |
 | [EXV014](https://gcos.wmo.int/en/essential-climate-variables/ozone) | Ozone |
 | [EXV044](https://gcos.wmo.int/en/essential-climate-variables/permafrost) | Permafrost |
+| [EXV056](https://goosocean.org/document/17507) | Phytoplankton biomass and diversity |
 | [EXV034](https://gcos.wmo.int/en/essential-climate-variables/plankton/) | Plankton |
 | [EXV005](https://gcos.wmo.int/en/essential-climate-variables/precipitation) | Precipitation |
 | [EXV015](https://gcos.wmo.int/en/essential-climate-variables/precursors) | Precursors (supporting the aerosol and ozone ECVs) |
-| [EXV001](https://gcos.wmo.int/en/essential-climate-variables/pressure) | Surface pressure |
 | [EXV038](https://gcos.wmo.int/en/essential-climate-variables/rivers) | River discharge |
+| [EXV027](https://goosocean.org/document/17464) | Sea ice |
+| [EXV023](https://goosocean.org/document/17465) | Sea level |
+| [EXV024](https://goosocean.org/document/17462) | Sea state |
+| [EXV060](https://goosocean.org/document/36268) | Sea turtles abundance and distribution |
+| [EXV019](https://goosocean.org/document/17470) | Sea-surface salinity |
+| [EXV017](https://goosocean.org/document/17466) | Sea-surface temperature |
+| [EXV061](https://goosocean.org/document/36267) | Seabirds abundance and distribution |
+| [EXV064](https://goosocean.org/document/17513) | Seagrass cover and composition |
 | [EXV041](https://gcos.wmo.int/en/essential-climate-variables/snow) | Snow |
 | [EXV051](https://gcos.wmo.int/en/essential-climate-variables/soil-carbon) | Soil carbon |
 | [EXV039](https://gcos.wmo.int/en/essential-climate-variables/soil-moisture) | Soil moisture |
+| [EXV022](https://goosocean.org/document/17469) | Subsurface currents |
+| [EXV020](https://goosocean.org/document/17471) | Subsurface salinity |
+| [EXV018](https://goosocean.org/document/17467) | Subsurface temperature |
+| [EXV021](https://goosocean.org/document/17468) | Surface currents |
+| [EXV001](https://gcos.wmo.int/en/essential-climate-variables/pressure) | Surface pressure |
 | [EXV006](https://gcos.wmo.int/en/essential-climate-variables/surface-radiation) | Surface Radiation Budget |
 | [EXV002](https://gcos.wmo.int/en/essential-climate-variables/surface-temperature) | Surface temperature |
 | [EXV004](https://gcos.wmo.int/en/essential-climate-variables/surface-vapour) | Surface water vapour |
 | [EXV003](https://gcos.wmo.int/en/essential-climate-variables/surface-wind) | Surface wind speed and direction |
 | [EXV040](https://gcos.wmo.int/en/essential-climate-variables/tws/) | Terrestrial water storage |
+| [EXV031](https://goosocean.org/document/17476) | Transient tracers |
 | [EXV007](https://gcos.wmo.int/en/essential-climate-variables/upper-temperature) | Upper-air Temperature |
 | [EXV009](https://gcos.wmo.int/en/essential-climate-variables/upper-vapour) | Upper-air water vapour |
 | [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
-| [EXV055](https://gcos.wmo.int/en/essential-climate-variables/water-use) | Anthropogenic water use |
+| [EXV057](https://goosocean.org/document/17509) | Zooplankton biomass and diversity |
+
 
