@@ -4,7 +4,7 @@
 | ------------- | -------------------------------------------------------------------- |
 | **ENVRI-HUB** | Data Portal of the European Environmental Research Infrastructures   |
 | AnaEE         | Analysis and Experimentation on Ecosystems                           |
-| ERA5          | ECMWF Reanalysis v5 (ERA5)                                           |
+| ERA5          | ECMWF Reanalysis v5 (ERA5), ECMWF                                    |
 | ARGO          | Real-time global ocean in situ observing system                      |
 | IRISCC        | Integrated Research Infrastructure Services for Climate Change Risks |
 | ICOS          | Integrated Carbon Observation System                                 |
@@ -49,31 +49,30 @@ Example output:
 
 ##### getStationData
 
-Output:
-* seriesID
-* averageTemp
-* maxTemp
-* minTemp
-* windSpeed
-* maxWindSpeed
-* windGust
-* precipitation
-* stationPressure
-* RH
-* RHMin
-* RHMax
-* RAD
-* leafWetness
-* elevation
+Example output:
+
+| date | seriesID | averageTemp | maxTemp | minTemp | windSpeed | maxWindSpeed | windGust | precipitation | stationPressure | RHMin | RHMax | RAD | leafWetness | idGroup | idCode | stationName | country | elevation |
+| ---- | -------- | ----------- | ------- | ------- | --------- | ------------ | -------- | ------------- | --------------- | ----- | ----- | --- | ----------- | ------- | ------ | ----------- | ------- | --------- |
+| 2022-06-14 00:00:00+02:00 | 11 | NaN | NaN | NaN | NaN | NaN | 0.0 | NaN | NaN | NaN | NaN | NaN | regione-liguria | AGORR | Alpe Gorreto | IT | 915.0 |
+    
 
 ##### getRasterData
 
-Output:
-* seriesID
-* maxTemp
-* minTemp
-* precipitation
-* idCode
+Example output:
+
+| date | seriesID | averageTemp | maxTemp | minTemp | windSpeed | maxWindSpeed | windGust | precipitation | stationPressure | RHMin | RHMax | RAD | leafWetness | idGroup | idCode | stationName | country | elevation |
+| ---- | -------- | ----------- | ------- | ------- | --------- | ------------ | -------- | ------------- | --------------- | ----- | ----- | --- | ----------- | ------- | ------ | ----------- | ------- | --------- |
+| 2022-06-14 00:00:00+02:00 | 11 | NaN | NaN | NaN | NaN | NaN | 0.0 | NaN | NaN | NaN | NaN | NaN | regione-liguria | AGORR | Alpe Gorreto | IT | 915.0 |
+
+
+##### GetEraData
+
+Example output:
+
+| station_id | idGroup | Country | firstRecord | lastRecord | Elevation | Latitude | Longitude | nuts1 | nuts2 | nuts3 | geometry | Date | date_index | d2m | t2m | u10 | v10 | ssrd | tp | rh | windspeed |
+| ---------- | ------- | ------- | ----------- | ---------- | --------- | -------- | --------- | ----- | ----- | ----- | -------- | ---- | ---------- | --- | --- | --- | --- | ---- | -- | -- | --------- | 
+| 9.50-44.25 | Era5 | Italia | 1900-01-01 00:00:00+00:00 | 2024-09-18 23:00:00+00:00 | 268.46797089999995 | 44.25 | 9.5 | Nord-Ovest | Liguria | Genova | POINT(9.5 44.25) | 2022-06-15 00:00:00+00:00 | 2022-06-15 00:00:00+00:00 | 19.75967612471516 | 24.44530128934332 | -1.9472449479938327 | -2.374912076563004 | -2.3283064365386963e-10 | 0.0 | 0.751407767589943 | 3.071151292087758 |
+
 
 #### ARGO
 
