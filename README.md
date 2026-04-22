@@ -89,3 +89,48 @@ Real-time global ocean in situ observing system, [Data access](https://www.euro-
 * `phy`: physical parameters
 * `bgc`: biogeochemical parameters
 
+## NERC
+
+ESV list
+
+| ID | Preferred Label |
+| -- | --------------- |
+| [EXV016](https://gcos.wmo.int/en/essential-climate-variables/aerosols) | Aerosol properties |
+| [EXV047](https://gcos.wmo.int/en/essential-climate-variables/albedo) | Albedo |
+| [EXV049](https://gcos.wmo.int/en/essential-climate-variables/biomass) | Above-ground biomass |
+| [EXV011](https://gcos.wmo.int/en/essential-climate-variables/clouds) | Cloud properties |
+| [EXV010](https://gcos.wmo.int/en/essential-climate-variables/earth-radiation) | Earth radiation budget |
+| [EXV054](https://gcos.wmo.int/en/essential-climate-variables/evaporation) | Evaporation from land |
+| [EXV045](https://gcos.wmo.int/en/essential-climate-variables/fapar) | Fraction of absorbed PAR |
+| [EXV052](https://gcos.wmo.int/en/essential-climate-variables/fire) | Fire |
+| [EXV013](https://gcos.wmo.int/en/essential-climate-variables/ghg) | Carbon dioxide, methane and other greenhouse gases |
+| [EXV053](https://gcos.wmo.int/en/essential-climate-variables/ghg-fluxes) | Anthropogenic greenhouse gas fluxes |
+| [EXV042](https://gcos.wmo.int/en/essential-climate-variables/glaciers) | Glaciers |
+| [EXV036](https://gcos.wmo.int/en/essential-climate-variables/groundwater) | Groundwater |
+| [EXV043](https://gcos.wmo.int/en/essential-climate-variables/ice-sheets-ice-shelves) | Ice sheets ad ice shelves |
+| [EXV046](https://gcos.wmo.int/en/essential-climate-variables/lai) | Leaf area index |
+| [EXV037](https://gcos.wmo.int/en/essential-climate-variables/lakes) | Lakes |
+| [EXV050](https://gcos.wmo.int/en/essential-climate-variables/land-cover) | Land cover |
+| [EXV048](https://gcos.wmo.int/en/essential-climate-variables/land-temperature) | Land-surface temperature |
+| [EXV012](https://gcos.wmo.int/en/essential-climate-variables/lightning) | Lightning |
+| [EXV035](https://gcos.wmo.int/en/essential-climate-variables/marine-habitats/) | Marine habitat properties |
+| [EXV014](https://gcos.wmo.int/en/essential-climate-variables/ozone) | Ozone |
+| [EXV044](https://gcos.wmo.int/en/essential-climate-variables/permafrost) | Permafrost |
+| [EXV034](https://gcos.wmo.int/en/essential-climate-variables/plankton/) | Plankton |
+| [EXV005](https://gcos.wmo.int/en/essential-climate-variables/precipitation) | Precipitation |
+| [EXV015](https://gcos.wmo.int/en/essential-climate-variables/precursors) | Precursors (supporting the aerosol and ozone ECVs) |
+| [EXV001](https://gcos.wmo.int/en/essential-climate-variables/pressure) | Surface pressure |
+| [EXV038](https://gcos.wmo.int/en/essential-climate-variables/rivers) | River discharge |
+| [EXV041](https://gcos.wmo.int/en/essential-climate-variables/snow) | Snow |
+| [EXV051](https://gcos.wmo.int/en/essential-climate-variables/soil-carbon) | Soil carbon |
+| [EXV039](https://gcos.wmo.int/en/essential-climate-variables/soil-moisture) | Soil moisture |
+| [EXV006](https://gcos.wmo.int/en/essential-climate-variables/surface-radiation) | Surface Radiation Budget |
+| [EXV002](https://gcos.wmo.int/en/essential-climate-variables/surface-temperature) | Surface temperature |
+| [EXV004](https://gcos.wmo.int/en/essential-climate-variables/surface-vapour) | Surface water vapour |
+| [EXV003](https://gcos.wmo.int/en/essential-climate-variables/surface-wind) | Surface wind speed and direction |
+| [EXV040](https://gcos.wmo.int/en/essential-climate-variables/tws/) | Terrestrial water storage |
+| [EXV007](https://gcos.wmo.int/en/essential-climate-variables/upper-temperature) | Upper-air Temperature |
+| [EXV009](https://gcos.wmo.int/en/essential-climate-variables/upper-vapour) | Upper-air water vapour |
+| [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
+| [EXV055](https://gcos.wmo.int/en/essential-climate-variables/water-use) | Anthropogenic water use |
+
