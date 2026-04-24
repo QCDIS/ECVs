@@ -1,38 +1,57 @@
 # ECV (EXV)
 
-| Abbreviation  | Description                                                          |
-| ------------- | -------------------------------------------------------------------- |
-| **ENVRI-HUB** | Data Portal of the European Environmental Research Infrastructures   |
-| AnaEE         | Analysis and Experimentation on Ecosystems                           |
-| ERA5          | ECMWF Reanalysis v5 (ERA5), ECMWF                                    |
-| ARGO          | Real-time global ocean in situ observing system                      |
-| IRISCC        | Integrated Research Infrastructure Services for Climate Change Risks |
-| ICOS          | Integrated Carbon Observation System                                 |
-| CDI           | SeaDataNet Common Data Index (CDI) service                           |
-| ACTRIS        | Aerosol, Clouds, and Trace Gases Research Infrastructure             |
-| IAGOS         | In-service Aircraft for a Global Observing System                    |
-| EPOS          | European Plate Observing System                                      |
-| **NERC**      | Natural Environment Research Council, UK                             |
-| I-ADOPT       | InteroperAble Descriptions of Observable Property                    |
-| NVS           | The NERC Vocabulary Server                                           |
-| SPARQL        | The NERC SPARQL queries for the NVS vocab server                     |
+## About Essential Climate Variables
 
+An Essential Climate Variable (ECV) is a physical, chemical or biological variable or a group of linked variables that critically contributes to the characterization of Earth’s climate. Global Climate Observing System ([GCOS](https://gcos.wmo.int/site/global-climate-observing-system-gcos)) currently specifies [55 ECVs](https://gcos.wmo.int/site/global-climate-observing-system-gcos/essential-climate-variables).
+
+ECV datasets provide the empirical evidence needed to understand and predict the evolution of climate, to guide mitigation and adaptation measures, to assess risks and enable attribution of climate events to underlying causes, and to underpin climate services. They are required to support the work of the UNFCCC and the IPCC.
+
+### ECV are identified based on the following criteria:
+
+* Relevance: The variable is critical for characterizing the climate system and its changes.
+* Feasibility: Observing or deriving the variable on a global scale is technically feasible using proven, scientifically understood methods.
+* Cost effectiveness: Generating and archiving data on the variable is affordable, mainly relying on coordinated observing systems using proven technology, taking advantage where possible of historical datasets.
+
+### ECV Observation Requirements
+
+Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245](https://library.wmo.int/records/item/58111-the-2022-gcos-ecvs-requirements)):
+
+* Atmosphere
+* Ocean
+* Land
+
+![img_ECVs-List.png](documentation/images/ECVs-List.png "ECVs List")
 
 ## ENVRI-HUB
 
-### Services
-
-* [Search](https://search.envri.eu/search/genericpages/genericpages?page=home)
-* [Catalogue Of Services (COS)](https://catalogue.staging.envri.eu/)
-
-### Library
+Data Portal of the European Environmental Research Infrastructures
 
 [ENVRI-Hub Python library](https://gitlab.a.incd.pt/envri-hub-next/vre-lib), streamline interaction with the ENVRI-Hub APIs, providing a pythonic facade to data and service access
 
 * `search_catalogue`: Performs search on the ENVRI-Hub's catalogue
 * `fetch_from_catalogue`: Retrieves a specific resource from the ENVRI-Hub's catalogue
 
-### Supports
+| Abbreviation    | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| **Data Portal** | https://envrihub.vm.fedcloud.eu/                                     |
+| AnaEE           | Analysis and Experimentation on Ecosystems                           |
+| ERA5            | ECMWF Reanalysis v5 (ERA5), ECMWF                                    |
+| ARGO            | Real-time global ocean in situ observing system                      |
+| IRISCC          | Integrated Research Infrastructure Services for Climate Change Risks |
+| ICOS            | Integrated Carbon Observation System                                 |
+| CDI             | SeaDataNet Common Data Index (CDI) service                           |
+| ACTRIS          | Aerosol, Clouds, and Trace Gases Research Infrastructure             |
+| IAGOS           | In-service Aircraft for a Global Observing System                    |
+| EPOS            | European Plate Observing System                                      |
+| **NERC**        | Natural Environment Research Council, UK                             |
+| I-ADOPT         | InteroperAble Descriptions of Observable Property                    |
+| NVS             | The NERC Vocabulary Server                                           |
+| SPARQL          | The NERC SPARQL queries for the NVS vocab server                     |
+
+### Data Portal
+
+* [Search](https://search.envri.eu/search/genericpages/genericpages?page=home)
+* [Catalogue Of Services (COS)](https://catalogue.staging.envri.eu/)
 
 #### AnaEE
 
@@ -165,4 +184,11 @@ Real-time global ocean in situ observing system, [Data access](https://www.euro-
 | [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
 | [EXV057](https://goosocean.org/document/17509) | Zooplankton biomass and diversity |
 
+### [I-ADPOT](https://i-adopt.github.io/)
 
+* [Framework](https://github.com/i-adopt/framework/)
+* [Framework ontology](https://i-adopt.github.io/ontology/)
+* [User Stories](https://github.com/i-adopt/users_stories/)
+* [Visualizer](https://sirkos.github.io/iadopt-vis/)
+* [Examples](https://github.com/mabablue/I-ADOPT-examples-playground/)
+* []()
