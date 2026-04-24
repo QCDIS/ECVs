@@ -35,7 +35,7 @@ Data Portal of the European Environmental Research Infrastructures
 | --------------- | -------------------------------------------------------------------- |
 | **Data Portal** | https://envrihub.vm.fedcloud.eu/                                     |
 | AnaEE           | Analysis and Experimentation on Ecosystems                           |
-| ERA5            | ECMWF Reanalysis v5 (ERA5), ECMWF                                    |
+|   ERA5          | ECMWF Reanalysis v5 (ERA5), ECMWF                                    |
 | ARGO            | Real-time global ocean in situ observing system                      |
 | IRISCC          | Integrated Research Infrastructure Services for Climate Change Risks |
 | ICOS            | Integrated Carbon Observation System                                 |
