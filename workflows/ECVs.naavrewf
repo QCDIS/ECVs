@@ -1,8 +1,8 @@
 {
   "chart": {
     "offset": {
-      "x": -5,
-      "y": 11
+      "x": -107,
+      "y": 66
     },
     "scale": 1,
     "nodes": {
@@ -187,7 +187,19 @@
         }
       }
     },
-    "links": {},
+    "links": {
+      "f9b402fd-473f-4355-8a92-8b51f62d5a11": {
+        "id": "f9b402fd-473f-4355-8a92-8b51f62d5a11",
+        "from": {
+          "nodeId": "8c85445c-1d28-4559-8cd1-6af00f496057",
+          "portId": "dummy_cell_arg_o"
+        },
+        "to": {
+          "nodeId": "38bc490b-0348-4de8-8a77-876bd664b1b3",
+          "portId": "dummy_cell_arg_i"
+        }
+      }
+    },
     "selected": {},
     "hovered": {}
   }
