@@ -168,6 +168,6 @@ Analysis and Experimentation on Ecosystems
 ## TODO
 
 * Fix, linking NERC vocabulary service, EXV -> variable name
-* More export options
+* Add select table columns option
 * Add status of component execution, store the output file list
 * 
