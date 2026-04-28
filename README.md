@@ -56,10 +56,6 @@ SeaDataNet Common Data Index (CDI) service
 Tables:
 * default
 
-#### EPOS
-
-European Plate Observing System
-
 #### IAGOS
 
 In-service Aircraft for a Global Observing System

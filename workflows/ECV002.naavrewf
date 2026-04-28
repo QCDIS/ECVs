@@ -1,0 +1,739 @@
+{
+  "chart": {
+    "offset": {
+      "x": -107,
+      "y": 66
+    },
+    "scale": 1,
+    "nodes": {
+      "8c85445c-1d28-4559-8cd1-6af00f496057": {
+        "id": "8c85445c-1d28-4559-8cd1-6af00f496057",
+        "position": {
+          "x": 209.75,
+          "y": 442
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "dummy_cell_arg_o": {
+            "id": "dummy_cell_arg_o",
+            "type": "right",
+            "properties": {
+              "color": "#2d9bd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/ba36d22f-e424-4f14-bcff-d1a57a969461/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "dummy_cell_arg_o",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-workflow-start-quan-pan-lifewatch-eu",
+            "description": "ecvs-workflow-start-quan-pan-lifewatch-eu",
+            "created": "2026-04-22T12:26:24.434197Z",
+            "modified": "2026-04-22T12:26:26.383885Z",
+            "version": 11,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-start-quan-pan-lifewatch-eu:7bdabc5",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/a8d39dd08006840158d323a360fe6fce87ea9179/ecvs-workflow-start-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "38bc490b-0348-4de8-8a77-876bd664b1b3": {
+        "id": "38bc490b-0348-4de8-8a77-876bd664b1b3",
+        "position": {
+          "x": 877.75,
+          "y": 434
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "dummy_cell_arg_i": {
+            "id": "dummy_cell_arg_i",
+            "type": "left",
+            "properties": {
+              "color": "#982dd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/28d63459-2f9e-484e-b046-94b79e222e47/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "dummy_cell_arg_i",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-workflow-finish-quan-pan-lifewatch-eu",
+            "description": "ecvs-workflow-finish-quan-pan-lifewatch-eu",
+            "created": "2026-04-22T12:27:59.758105Z",
+            "modified": "2026-04-22T12:28:01.430000Z",
+            "version": 9,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-finish-quan-pan-lifewatch-eu:6d63db3",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/0f48732c859e4cebac549898c3b91d24b8a349c0/ecvs-workflow-finish-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "9995c96e-ae04-4b92-969b-ff2834b25a33": {
+        "id": "9995c96e-ae04-4b92-969b-ff2834b25a33",
+        "position": {
+          "x": 547.6499938964844,
+          "y": 161
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "dummy_cell_arg_i": {
+            "id": "dummy_cell_arg_i",
+            "type": "left",
+            "properties": {
+              "color": "#982dd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "dummy_cell_arg_o": {
+            "id": "dummy_cell_arg_o",
+            "type": "right",
+            "properties": {
+              "color": "#2d9bd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/20a7b299-bc2c-4620-94b7-d4c6cf884072/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              },
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "dummy_cell_arg_i",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "dummy_cell_arg_o",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_BEACON_NODE_IRISCC",
+                "assignation": "conf_SERVICE_URL_BEACON_NODE_IRISCC = 'https://beacon-iriscc.maris.nl'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_actris_table",
+                "type": "str",
+                "default_value": "actris-in-situ"
+              },
+              {
+                "name": "param_end_date",
+                "type": "str",
+                "default_value": "2025-12-31"
+              },
+              {
+                "name": "param_exv_variable",
+                "type": "str",
+                "default_value": "EXV002"
+              },
+              {
+                "name": "param_height_max",
+                "type": "int",
+                "default_value": "200"
+              },
+              {
+                "name": "param_height_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_lat_max",
+                "type": "int",
+                "default_value": "55"
+              },
+              {
+                "name": "param_lat_min",
+                "type": "int",
+                "default_value": "45"
+              },
+              {
+                "name": "param_lon_max",
+                "type": "int",
+                "default_value": "20"
+              },
+              {
+                "name": "param_lon_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_start_date",
+                "type": "str",
+                "default_value": "2000-01-01"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecv-actris-quan-pan-lifewatch-eu",
+            "description": "ecv-actris-quan-pan-lifewatch-eu",
+            "created": "2026-04-28T15:51:54.678613Z",
+            "modified": "2026-04-28T15:51:56.261457Z",
+            "version": 3,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-actris-quan-pan-lifewatch-eu:186191b",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/302a44fccf7ff3f2c0f4dce2a250041d532a5b72/ecv-actris-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "8f52abaf-4283-4536-8373-73e9fdee4539": {
+        "id": "8f52abaf-4283-4536-8373-73e9fdee4539",
+        "position": {
+          "x": 548.6499938964844,
+          "y": 298
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "dummy_cell_arg_i": {
+            "id": "dummy_cell_arg_i",
+            "type": "left",
+            "properties": {
+              "color": "#982dd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "dummy_cell_arg_o": {
+            "id": "dummy_cell_arg_o",
+            "type": "right",
+            "properties": {
+              "color": "#2d9bd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/5c3e1066-d41d-4b54-96b2-a5851ac7fea9/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
+            },
+            "dependencies": [
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "dummy_cell_arg_i",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "dummy_cell_arg_o",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_BEACON_NODE_IRISCC",
+                "assignation": "conf_SERVICE_URL_BEACON_NODE_IRISCC = 'https://beacon-iriscc.maris.nl'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_exv_variable",
+                "type": "str",
+                "default_value": "EXV002"
+              },
+              {
+                "name": "param_height_max",
+                "type": "int",
+                "default_value": "200"
+              },
+              {
+                "name": "param_height_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_iagos_table",
+                "type": "str",
+                "default_value": "iagos-l1"
+              },
+              {
+                "name": "param_lat_max",
+                "type": "int",
+                "default_value": "55"
+              },
+              {
+                "name": "param_lat_min",
+                "type": "int",
+                "default_value": "45"
+              },
+              {
+                "name": "param_lon_max",
+                "type": "int",
+                "default_value": "20"
+              },
+              {
+                "name": "param_lon_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_start_date",
+                "type": "str",
+                "default_value": "2000-01-01"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              },
+              {
+                "name": "param_end_date",
+                "type": "str",
+                "default_value": "2025-12-31"
+              }
+            ],
+            "secrets": [],
+            "title": "ecv-iagos-quan-pan-lifewatch-eu",
+            "description": "ecv-iagos-quan-pan-lifewatch-eu",
+            "created": "2026-04-28T15:51:30.825129Z",
+            "modified": "2026-04-28T15:51:33.283432Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-iagos-quan-pan-lifewatch-eu:1aadc12",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/f23ee98c9f8eff17d8463d6d406d062a57c3a9b5/ecv-iagos-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      }
+    },
+    "links": {
+      "c0d7f4ad-3c91-4ef0-bfc2-02ae21c91278": {
+        "id": "c0d7f4ad-3c91-4ef0-bfc2-02ae21c91278",
+        "from": {
+          "nodeId": "8c85445c-1d28-4559-8cd1-6af00f496057",
+          "portId": "dummy_cell_arg_o"
+        },
+        "to": {
+          "nodeId": "9995c96e-ae04-4b92-969b-ff2834b25a33",
+          "portId": "dummy_cell_arg_i"
+        }
+      },
+      "b2277f9e-ec32-4567-9a21-71f296d377d4": {
+        "id": "b2277f9e-ec32-4567-9a21-71f296d377d4",
+        "from": {
+          "nodeId": "8c85445c-1d28-4559-8cd1-6af00f496057",
+          "portId": "dummy_cell_arg_o"
+        },
+        "to": {
+          "nodeId": "8f52abaf-4283-4536-8373-73e9fdee4539",
+          "portId": "dummy_cell_arg_i"
+        }
+      },
+      "9248ee37-e952-4c8e-bb30-9d00da4db930": {
+        "id": "9248ee37-e952-4c8e-bb30-9d00da4db930",
+        "from": {
+          "nodeId": "9995c96e-ae04-4b92-969b-ff2834b25a33",
+          "portId": "dummy_cell_arg_o"
+        },
+        "to": {
+          "nodeId": "38bc490b-0348-4de8-8a77-876bd664b1b3",
+          "portId": "dummy_cell_arg_i"
+        }
+      },
+      "46f9cd1b-4de1-42fd-888f-beb0f3ab891b": {
+        "id": "46f9cd1b-4de1-42fd-888f-beb0f3ab891b",
+        "from": {
+          "nodeId": "8f52abaf-4283-4536-8373-73e9fdee4539",
+          "portId": "dummy_cell_arg_o"
+        },
+        "to": {
+          "nodeId": "38bc490b-0348-4de8-8a77-876bd664b1b3",
+          "portId": "dummy_cell_arg_i"
+        }
+      }
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
