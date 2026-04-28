@@ -164,4 +164,10 @@ Analysis and Experimentation on Ecosystems
 * [User Stories](https://github.com/i-adopt/users_stories/)
 * [Visualizer](https://sirkos.github.io/iadopt-vis/)
 * [Examples](https://github.com/mabablue/I-ADOPT-examples-playground/)
-* []()
+
+## TODO
+
+* Fix, linking NERC vocabulary serviece, EXV -> variable name
+* More export options
+* Add status of component execution, store the output files
+* 
