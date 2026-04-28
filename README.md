@@ -167,7 +167,7 @@ Analysis and Experimentation on Ecosystems
 
 ## TODO
 
-* Fix, linking NERC vocabulary serviece, EXV -> variable name
+* Fix, linking NERC vocabulary service, EXV -> variable name
 * More export options
-* Add status of component execution, store the output files
+* Add status of component execution, store the output file list
 * 
