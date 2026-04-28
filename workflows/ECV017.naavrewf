@@ -1,43 +1,55 @@
 {
   "chart": {
     "offset": {
-      "x": 53,
-      "y": 28
+      "x": 178.21,
+      "y": 102.97
     },
-    "scale": 1,
+    "scale": 0.757,
     "nodes": {
-      "1ee458e3-0a4f-424a-a624-35767c73a277": {
-        "id": "1ee458e3-0a4f-424a-a624-35767c73a277",
+      "d2c6073b-7f25-4395-a7c1-be1e25081330": {
+        "id": "d2c6073b-7f25-4395-a7c1-be1e25081330",
         "position": {
-          "x": 747.6499938964844,
-          "y": 467
+          "x": 954.1836794975413,
+          "y": 347.1611624834875
         },
         "orientation": 0,
         "type": "workflow-cell",
         "ports": {
-          "dummy_cell_arg_i": {
-            "id": "dummy_cell_arg_i",
+          "file_result": {
+            "id": "file_result",
             "type": "left",
             "properties": {
-              "color": "#982dd2",
+              "color": "#79d2b5",
               "parentNodeType": "workflow-cell"
             },
             "position": {
               "x": -2,
-              "y": 30
+              "y": 17
+            }
+          },
+          "variable_name": {
+            "id": "variable_name",
+            "type": "left",
+            "properties": {
+              "color": "#3c783a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
             }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/28d63459-2f9e-484e-b046-94b79e222e47/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0e37bc62-f70f-4ae6-9c07-0f0230ea62a2/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
             "shared_with_users": [],
             "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.14",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.14"
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
             },
             "dependencies": [
               {
@@ -48,7 +60,11 @@
             ],
             "inputs": [
               {
-                "name": "dummy_cell_arg_i",
+                "name": "file_result",
+                "type": "str"
+              },
+              {
+                "name": "variable_name",
                 "type": "str"
               }
             ],
@@ -77,12 +93,12 @@
             "secrets": [],
             "title": "ecvs-workflow-finish-quan-pan-lifewatch-eu",
             "description": "ecvs-workflow-finish-quan-pan-lifewatch-eu",
-            "created": "2026-04-22T12:27:59.758105Z",
-            "modified": "2026-04-22T12:28:01.430000Z",
-            "version": 9,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-finish-quan-pan-lifewatch-eu:6d63db3",
+            "created": "2026-04-28T21:04:52.582409Z",
+            "modified": "2026-04-28T21:04:52.887680Z",
+            "version": 10,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-finish-quan-pan-lifewatch-eu:9c4af56",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/0f48732c859e4cebac549898c3b91d24b8a349c0/ecvs-workflow-finish-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/1c31e0d638595ad131f6a9e1c0104ed84f52f317/ecvs-workflow-finish-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
@@ -92,38 +108,182 @@
           "height": 61
         }
       },
-      "d9002370-2470-41d7-a12d-8a6f7d946118": {
-        "id": "d9002370-2470-41d7-a12d-8a6f7d946118",
+      "ef88e5ed-619a-4d69-b6b1-299b6018ae0e": {
+        "id": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
         "position": {
-          "x": 156.64999389648438,
-          "y": 472
+          "x": 69.27343975757528,
+          "y": 253.67239101717297
         },
         "orientation": 0,
         "type": "workflow-cell",
         "ports": {
-          "dummy_cell_arg_o": {
-            "id": "dummy_cell_arg_o",
+          "end_date": {
+            "id": "end_date",
             "type": "right",
             "properties": {
-              "color": "#2d9bd2",
+              "color": "#783a74",
               "parentNodeType": "workflow-cell"
             },
             "position": {
               "x": 252,
-              "y": 30
+              "y": 13
+            }
+          },
+          "exv_variable": {
+            "id": "exv_variable",
+            "type": "right",
+            "properties": {
+              "color": "#96e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "right",
+            "properties": {
+              "color": "#b1e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "right",
+            "properties": {
+              "color": "#3a783f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "right",
+            "properties": {
+              "color": "#862d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "right",
+            "properties": {
+              "color": "#862d74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "right",
+            "properties": {
+              "color": "#bf4d40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 169
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "right",
+            "properties": {
+              "color": "#931f8c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 195
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "right",
+            "properties": {
+              "color": "#d279d1",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 221
+            }
+          },
+          "table_actris": {
+            "id": "table_actris",
+            "type": "right",
+            "properties": {
+              "color": "#4075bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 247
+            }
+          },
+          "table_argo": {
+            "id": "table_argo",
+            "type": "right",
+            "properties": {
+              "color": "#85d22d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 273
+            }
+          },
+          "table_cdi": {
+            "id": "table_cdi",
+            "type": "right",
+            "properties": {
+              "color": "#3a5a78",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 299
+            }
+          },
+          "table_iagos": {
+            "id": "table_iagos",
+            "type": "right",
+            "properties": {
+              "color": "#aa87c5",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 325
             }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/ba36d22f-e424-4f14-bcff-d1a57a969461/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/68b1abee-ee0e-45fa-95d5-e52d7b2b75d4/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
             "shared_with_users": [],
             "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.14",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.14"
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
             },
             "dependencies": [
               {
@@ -135,7 +295,55 @@
             "inputs": [],
             "outputs": [
               {
-                "name": "dummy_cell_arg_o",
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "exv_variable",
+                "type": "str"
+              },
+              {
+                "name": "height_max",
+                "type": "float"
+              },
+              {
+                "name": "height_min",
+                "type": "float"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              },
+              {
+                "name": "table_actris",
+                "type": "str"
+              },
+              {
+                "name": "table_argo",
+                "type": "str"
+              },
+              {
+                "name": "table_cdi",
+                "type": "str"
+              },
+              {
+                "name": "table_iagos",
                 "type": "str"
               }
             ],
@@ -163,6 +371,71 @@
             ],
             "params": [
               {
+                "name": "param_end_date",
+                "type": "str",
+                "default_value": "2025-12-31"
+              },
+              {
+                "name": "param_exv_variable",
+                "type": "str",
+                "default_value": "EXV002"
+              },
+              {
+                "name": "param_height_max",
+                "type": "int",
+                "default_value": "200"
+              },
+              {
+                "name": "param_height_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_lat_max",
+                "type": "int",
+                "default_value": "55"
+              },
+              {
+                "name": "param_lat_min",
+                "type": "int",
+                "default_value": "45"
+              },
+              {
+                "name": "param_lon_max",
+                "type": "int",
+                "default_value": "20"
+              },
+              {
+                "name": "param_lon_min",
+                "type": "int",
+                "default_value": "0"
+              },
+              {
+                "name": "param_start_date",
+                "type": "str",
+                "default_value": "2000-01-01"
+              },
+              {
+                "name": "param_table_actris",
+                "type": "str",
+                "default_value": "actris-in-situ"
+              },
+              {
+                "name": "param_table_argo",
+                "type": "str",
+                "default_value": "argo"
+              },
+              {
+                "name": "param_table_cdi",
+                "type": "str",
+                "default_value": "default"
+              },
+              {
+                "name": "param_table_iagos",
+                "type": "str",
+                "default_value": "iagos-l1"
+              },
+              {
                 "name": "param_workflow_name",
                 "type": "str",
                 "default_value": "workflow name"
@@ -171,58 +444,178 @@
             "secrets": [],
             "title": "ecvs-workflow-start-quan-pan-lifewatch-eu",
             "description": "ecvs-workflow-start-quan-pan-lifewatch-eu",
-            "created": "2026-04-22T12:26:24.434197Z",
-            "modified": "2026-04-22T12:26:26.383885Z",
+            "created": "2026-04-28T21:48:52.603284Z",
+            "modified": "2026-04-28T21:48:53.582183Z",
             "version": 11,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-start-quan-pan-lifewatch-eu:7bdabc5",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-workflow-start-quan-pan-lifewatch-eu:fbce068",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/a8d39dd08006840158d323a360fe6fce87ea9179/ecvs-workflow-start-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/2c40cfbae2b96c1683cec14d07bc38e2ea241386/ecvs-workflow-start-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
         },
         "size": {
           "width": 252,
-          "height": 61
+          "height": 339
         }
       },
-      "344d1599-9682-4faf-8875-afb3d68f35cd": {
-        "id": "344d1599-9682-4faf-8875-afb3d68f35cd",
+      "0e0ef659-3e39-4e71-afa9-d37f307dd9f3": {
+        "id": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
         "position": {
-          "x": 454.6499938964844,
-          "y": 294
+          "x": 519.7357911446293,
+          "y": 0
         },
         "orientation": 0,
         "type": "workflow-cell",
         "ports": {
-          "dummy_cell_arg_i": {
-            "id": "dummy_cell_arg_i",
+          "end_date": {
+            "id": "end_date",
             "type": "left",
             "properties": {
-              "color": "#982dd2",
+              "color": "#783a74",
               "parentNodeType": "workflow-cell"
             },
             "position": {
               "x": -2,
-              "y": 30
+              "y": 13
             }
           },
-          "dummy_cell_arg_o": {
-            "id": "dummy_cell_arg_o",
+          "exv_variable": {
+            "id": "exv_variable",
+            "type": "left",
+            "properties": {
+              "color": "#96e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "left",
+            "properties": {
+              "color": "#b1e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "left",
+            "properties": {
+              "color": "#3a783f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#862d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#862d74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#bf4d40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#931f8c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#d279d1",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "table_argo": {
+            "id": "table_argo",
+            "type": "left",
+            "properties": {
+              "color": "#85d22d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "file_result": {
+            "id": "file_result",
             "type": "right",
             "properties": {
-              "color": "#2d9bd2",
+              "color": "#79d2b5",
               "parentNodeType": "workflow-cell"
             },
             "position": {
               "x": 252,
-              "y": 30
+              "y": 117
+            }
+          },
+          "variable_name": {
+            "id": "variable_name",
+            "type": "right",
+            "properties": {
+              "color": "#3c783a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
             }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/eb4cd93f-295a-49aa-897b-82ca7b703c5c/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d894613e-77b8-45dd-a9d0-3ec678d6421e/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -325,13 +718,422 @@
             ],
             "inputs": [
               {
-                "name": "dummy_cell_arg_i",
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "exv_variable",
+                "type": "str"
+              },
+              {
+                "name": "height_max",
+                "type": "float"
+              },
+              {
+                "name": "height_min",
+                "type": "float"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              },
+              {
+                "name": "table_argo",
                 "type": "str"
               }
             ],
             "outputs": [
               {
-                "name": "dummy_cell_arg_o",
+                "name": "file_result",
+                "type": "str"
+              },
+              {
+                "name": "variable_name",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_BEACON_NODE_IRISCC",
+                "assignation": "conf_SERVICE_URL_BEACON_NODE_IRISCC = 'https://beacon-iriscc.maris.nl'"
+              },
+              {
+                "name": "conf_SERVICE_URL_BEACON_NODE_ARGO",
+                "assignation": "conf_SERVICE_URL_BEACON_NODE_ARGO = 'https://beacon-argo.maris.nl'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_SERVICE_KEY",
+                "type": "str"
+              }
+            ],
+            "title": "ecv-argo-quan-pan-lifewatch-eu",
+            "description": "ecv-argo-quan-pan-lifewatch-eu",
+            "created": "2026-04-28T22:07:45.314435Z",
+            "modified": "2026-04-28T22:07:46.939677Z",
+            "version": 5,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-quan-pan-lifewatch-eu:38e0b29",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/2cc3224b2ad575f50e2bd46a8393066d277669bc/ecv-argo-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 261
+        }
+      },
+      "a55166c0-3864-4853-934e-b326bfdddbdd": {
+        "id": "a55166c0-3864-4853-934e-b326bfdddbdd",
+        "position": {
+          "x": 521.0567951076412,
+          "y": 537.6882430647292
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "end_date": {
+            "id": "end_date",
+            "type": "left",
+            "properties": {
+              "color": "#783a74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "exv_variable": {
+            "id": "exv_variable",
+            "type": "left",
+            "properties": {
+              "color": "#96e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "left",
+            "properties": {
+              "color": "#b1e06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "left",
+            "properties": {
+              "color": "#3a783f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#862d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#862d74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#bf4d40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#931f8c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#d279d1",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "table_cdi": {
+            "id": "table_cdi",
+            "type": "left",
+            "properties": {
+              "color": "#3a5a78",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "file_result": {
+            "id": "file_result",
+            "type": "right",
+            "properties": {
+              "color": "#79d2b5",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "variable_name": {
+            "id": "variable_name",
+            "type": "right",
+            "properties": {
+              "color": "#3c783a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/8bac7a92-b3cf-43dc-a2f4-ded19f2997e9/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              },
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "exv_variable",
+                "type": "str"
+              },
+              {
+                "name": "height_max",
+                "type": "float"
+              },
+              {
+                "name": "height_min",
+                "type": "float"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              },
+              {
+                "name": "table_cdi",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_result",
+                "type": "str"
+              },
+              {
+                "name": "variable_name",
                 "type": "str"
               }
             ],
@@ -367,59 +1169,9 @@
             ],
             "params": [
               {
-                "name": "param_lon_max",
-                "type": "int",
-                "default_value": "20"
-              },
-              {
-                "name": "param_lon_min",
-                "type": "int",
-                "default_value": "0"
-              },
-              {
-                "name": "param_start_date",
-                "type": "str",
-                "default_value": "2000-01-01"
-              },
-              {
                 "name": "param_workflow_name",
                 "type": "str",
                 "default_value": "workflow name"
-              },
-              {
-                "name": "param_cdi_table",
-                "type": "str",
-                "default_value": "default"
-              },
-              {
-                "name": "param_end_date",
-                "type": "str",
-                "default_value": "2025-12-31"
-              },
-              {
-                "name": "param_exv_variable",
-                "type": "str",
-                "default_value": "EXV017"
-              },
-              {
-                "name": "param_height_max",
-                "type": "int",
-                "default_value": "200"
-              },
-              {
-                "name": "param_height_min",
-                "type": "int",
-                "default_value": "0"
-              },
-              {
-                "name": "param_lat_max",
-                "type": "int",
-                "default_value": "55"
-              },
-              {
-                "name": "param_lat_min",
-                "type": "int",
-                "default_value": "45"
               }
             ],
             "secrets": [
@@ -430,324 +1182,285 @@
             ],
             "title": "ecv-cdi-quan-pan-lifewatch-eu",
             "description": "ecv-cdi-quan-pan-lifewatch-eu",
-            "created": "2026-04-28T16:21:22.182021Z",
-            "modified": "2026-04-28T16:21:23.358069Z",
-            "version": 1,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-cdi-quan-pan-lifewatch-eu:26e1540",
+            "created": "2026-04-28T22:08:14.019842Z",
+            "modified": "2026-04-28T22:08:16.872669Z",
+            "version": 5,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-cdi-quan-pan-lifewatch-eu:22a5314",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/7a9537e9d2565fff5fc1430916c95943be6ea130/ecv-cdi-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/21e000af98df140986037421132df522c603f029/ecv-cdi-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
         },
         "size": {
           "width": 252,
-          "height": 61
-        }
-      },
-      "f61b4d1e-ab61-42b5-a376-c0d6c439ddbd": {
-        "id": "f61b4d1e-ab61-42b5-a376-c0d6c439ddbd",
-        "position": {
-          "x": 452.6499938964844,
-          "y": 424
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "dummy_cell_arg_i": {
-            "id": "dummy_cell_arg_i",
-            "type": "left",
-            "properties": {
-              "color": "#982dd2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 30
-            }
-          },
-          "dummy_cell_arg_o": {
-            "id": "dummy_cell_arg_o",
-            "type": "right",
-            "properties": {
-              "color": "#2d9bd2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4acdcc13-0335-4269-b3d7-de292ae84b43/",
-            "owner": "quan.pan@lifewatch.eu",
-            "virtual_lab": "ecvs",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.16",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.16"
-            },
-            "dependencies": [
-              {
-                "name": "mercantile",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "requests",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "deprecated",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "pyarrow",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "os",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "sys",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "datetime",
-                "module": "datetime",
-                "asname": null
-              },
-              {
-                "name": "util",
-                "module": "importlib",
-                "asname": "importlib_util"
-              },
-              {
-                "name": "pyplot",
-                "module": "matplotlib",
-                "asname": "plt"
-              },
-              {
-                "name": "numpy",
-                "module": "",
-                "asname": "np"
-              },
-              {
-                "name": "pandas",
-                "module": "",
-                "asname": "pd"
-              },
-              {
-                "name": "geopandas",
-                "module": "",
-                "asname": "gpd"
-              },
-              {
-                "name": "dask",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "xarray",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "xyzservices",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "geopy",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "rasterio",
-                "module": "",
-                "asname": null
-              },
-              {
-                "name": "joblib",
-                "module": "",
-                "asname": null
-              }
-            ],
-            "inputs": [
-              {
-                "name": "dummy_cell_arg_i",
-                "type": "str"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "dummy_cell_arg_o",
-                "type": "str"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_minio_user_local_data",
-                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
-              },
-              {
-                "name": "conf_minio_public_local_code",
-                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
-              },
-              {
-                "name": "conf_SERVICE_URL_BEACON_NODE_IRISCC",
-                "assignation": "conf_SERVICE_URL_BEACON_NODE_IRISCC = 'https://beacon-iriscc.maris.nl'"
-              },
-              {
-                "name": "conf_SERVICE_URL_BEACON_NODE_ARGO",
-                "assignation": "conf_SERVICE_URL_BEACON_NODE_ARGO = 'https://beacon-argo.maris.nl'"
-              },
-              {
-                "name": "conf_delimiter_csv",
-                "assignation": "conf_delimiter_csv = ','"
-              },
-              {
-                "name": "conf_vlab_name",
-                "assignation": "conf_vlab_name = 'ECVs'"
-              },
-              {
-                "name": "conf_minio_user_local_flog",
-                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
-              }
-            ],
-            "params": [
-              {
-                "name": "param_argo_table",
-                "type": "str",
-                "default_value": "argo"
-              },
-              {
-                "name": "param_end_date",
-                "type": "str",
-                "default_value": "2025-12-31"
-              },
-              {
-                "name": "param_exv_variable",
-                "type": "str",
-                "default_value": "EXV017"
-              },
-              {
-                "name": "param_height_max",
-                "type": "int",
-                "default_value": "200"
-              },
-              {
-                "name": "param_height_min",
-                "type": "int",
-                "default_value": "0"
-              },
-              {
-                "name": "param_lat_max",
-                "type": "int",
-                "default_value": "55"
-              },
-              {
-                "name": "param_lat_min",
-                "type": "int",
-                "default_value": "45"
-              },
-              {
-                "name": "param_lon_max",
-                "type": "int",
-                "default_value": "20"
-              },
-              {
-                "name": "param_lon_min",
-                "type": "int",
-                "default_value": "0"
-              },
-              {
-                "name": "param_start_date",
-                "type": "str",
-                "default_value": "2000-01-01"
-              },
-              {
-                "name": "param_workflow_name",
-                "type": "str",
-                "default_value": "workflow name"
-              }
-            ],
-            "secrets": [
-              {
-                "name": "secret_SERVICE_KEY",
-                "type": "str"
-              }
-            ],
-            "title": "ecv-argo-quan-pan-lifewatch-eu",
-            "description": "ecv-argo-quan-pan-lifewatch-eu",
-            "created": "2026-04-28T17:19:09.811674Z",
-            "modified": "2026-04-28T17:19:11.201306Z",
-            "version": 1,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-quan-pan-lifewatch-eu:f3a9001",
-            "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/870e3a0ece7e378b13cc0f65d1b26358212f42d1/ecv-argo-quan-pan-lifewatch-eu",
-            "is_draft": false,
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
+          "height": 261
         }
       }
     },
     "links": {
-      "1530a5a2-c92a-4ac8-8b51-174fd61097b2": {
-        "id": "1530a5a2-c92a-4ac8-8b51-174fd61097b2",
+      "adae5c62-4a9a-4de0-8be7-da2a16179deb": {
+        "id": "adae5c62-4a9a-4de0-8be7-da2a16179deb",
         "from": {
-          "nodeId": "d9002370-2470-41d7-a12d-8a6f7d946118",
-          "portId": "dummy_cell_arg_o"
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "variable_name"
         },
         "to": {
-          "nodeId": "344d1599-9682-4faf-8875-afb3d68f35cd",
-          "portId": "dummy_cell_arg_i"
+          "nodeId": "d2c6073b-7f25-4395-a7c1-be1e25081330",
+          "portId": "variable_name"
         }
       },
-      "2c09da26-520f-4a7a-85c9-03b18fc132d9": {
-        "id": "2c09da26-520f-4a7a-85c9-03b18fc132d9",
+      "10aad98d-5466-4a56-849c-9138066d9b35": {
+        "id": "10aad98d-5466-4a56-849c-9138066d9b35",
         "from": {
-          "nodeId": "344d1599-9682-4faf-8875-afb3d68f35cd",
-          "portId": "dummy_cell_arg_o"
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "variable_name"
         },
         "to": {
-          "nodeId": "1ee458e3-0a4f-424a-a624-35767c73a277",
-          "portId": "dummy_cell_arg_i"
+          "nodeId": "d2c6073b-7f25-4395-a7c1-be1e25081330",
+          "portId": "variable_name"
         }
       },
-      "20257c76-902c-43b2-b334-66860f602735": {
-        "id": "20257c76-902c-43b2-b334-66860f602735",
+      "842cebf3-3aa9-4c59-8bd4-49171d320926": {
+        "id": "842cebf3-3aa9-4c59-8bd4-49171d320926",
         "from": {
-          "nodeId": "d9002370-2470-41d7-a12d-8a6f7d946118",
-          "portId": "dummy_cell_arg_o"
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "file_result"
         },
         "to": {
-          "nodeId": "f61b4d1e-ab61-42b5-a376-c0d6c439ddbd",
-          "portId": "dummy_cell_arg_i"
+          "nodeId": "d2c6073b-7f25-4395-a7c1-be1e25081330",
+          "portId": "file_result"
         }
       },
-      "a1cfe3d7-fe00-4348-bf0e-33e1601cb8f4": {
-        "id": "a1cfe3d7-fe00-4348-bf0e-33e1601cb8f4",
+      "5aabcb24-822c-4138-97fa-677e0532fc38": {
+        "id": "5aabcb24-822c-4138-97fa-677e0532fc38",
         "from": {
-          "nodeId": "f61b4d1e-ab61-42b5-a376-c0d6c439ddbd",
-          "portId": "dummy_cell_arg_o"
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "file_result"
         },
         "to": {
-          "nodeId": "1ee458e3-0a4f-424a-a624-35767c73a277",
-          "portId": "dummy_cell_arg_i"
+          "nodeId": "d2c6073b-7f25-4395-a7c1-be1e25081330",
+          "portId": "file_result"
+        }
+      },
+      "67d9d14e-d167-4bac-8d62-95d00ee9976c": {
+        "id": "67d9d14e-d167-4bac-8d62-95d00ee9976c",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "table_argo"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "table_argo"
+        }
+      },
+      "2ca2b74c-4013-4c60-8031-314f2f560661": {
+        "id": "2ca2b74c-4013-4c60-8031-314f2f560661",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "table_cdi"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "table_cdi"
+        }
+      },
+      "63099d75-4a59-4efb-b30d-5391e672c6f2": {
+        "id": "63099d75-4a59-4efb-b30d-5391e672c6f2",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "end_date"
+        }
+      },
+      "04124c55-8e07-496d-9486-a42b7e9928bd": {
+        "id": "04124c55-8e07-496d-9486-a42b7e9928bd",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "end_date"
+        }
+      },
+      "675420f7-6263-4565-8dbf-4ca65eda28f5": {
+        "id": "675420f7-6263-4565-8dbf-4ca65eda28f5",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "exv_variable"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "exv_variable"
+        }
+      },
+      "bd444b93-c76d-4749-a525-caaec9d3c926": {
+        "id": "bd444b93-c76d-4749-a525-caaec9d3c926",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "exv_variable"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "exv_variable"
+        }
+      },
+      "84dcc63d-69dc-4d54-b50c-27abf9d324eb": {
+        "id": "84dcc63d-69dc-4d54-b50c-27abf9d324eb",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "height_max"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "height_max"
+        }
+      },
+      "0b5da57b-7ac6-4cc3-851f-e46f79793531": {
+        "id": "0b5da57b-7ac6-4cc3-851f-e46f79793531",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "height_max"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "height_max"
+        }
+      },
+      "a262f826-1acf-4004-9775-ad1b252f80b8": {
+        "id": "a262f826-1acf-4004-9775-ad1b252f80b8",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "height_min"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "height_min"
+        }
+      },
+      "fcc77858-ee80-457c-8e9b-7496eaa4689c": {
+        "id": "fcc77858-ee80-457c-8e9b-7496eaa4689c",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "height_min"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "height_min"
+        }
+      },
+      "cb705e71-51bf-4acf-829b-3b3d7c958454": {
+        "id": "cb705e71-51bf-4acf-829b-3b3d7c958454",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "lat_max"
+        }
+      },
+      "3de46227-a937-463d-b396-892cfa23e211": {
+        "id": "3de46227-a937-463d-b396-892cfa23e211",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "lat_max"
+        }
+      },
+      "9745f398-9f14-46eb-b5ba-069b619327af": {
+        "id": "9745f398-9f14-46eb-b5ba-069b619327af",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "lat_min"
+        }
+      },
+      "30cb58bd-7d1c-4a2a-a95c-26ec32ccf46a": {
+        "id": "30cb58bd-7d1c-4a2a-a95c-26ec32ccf46a",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "lat_min"
+        }
+      },
+      "84843a96-a480-4524-ad7f-80553562f8ea": {
+        "id": "84843a96-a480-4524-ad7f-80553562f8ea",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "lon_max"
+        }
+      },
+      "0df80c42-20b0-452f-913b-b1ad84dc4ee2": {
+        "id": "0df80c42-20b0-452f-913b-b1ad84dc4ee2",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "lon_max"
+        }
+      },
+      "1bb2e5e1-6a44-47bf-90a9-00ef508d84bb": {
+        "id": "1bb2e5e1-6a44-47bf-90a9-00ef508d84bb",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "lon_min"
+        }
+      },
+      "44b2f888-524f-4524-92e4-a71e0601f363": {
+        "id": "44b2f888-524f-4524-92e4-a71e0601f363",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "lon_min"
+        }
+      },
+      "86ef2910-be12-4214-88a5-b1ffe7dcd860": {
+        "id": "86ef2910-be12-4214-88a5-b1ffe7dcd860",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "0e0ef659-3e39-4e71-afa9-d37f307dd9f3",
+          "portId": "start_date"
+        }
+      },
+      "c488a2f0-157a-4ec1-b683-37b70ff5d878": {
+        "id": "c488a2f0-157a-4ec1-b683-37b70ff5d878",
+        "from": {
+          "nodeId": "ef88e5ed-619a-4d69-b6b1-299b6018ae0e",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "a55166c0-3864-4853-934e-b326bfdddbdd",
+          "portId": "start_date"
         }
       }
     },
