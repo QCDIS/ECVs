@@ -26,6 +26,8 @@ Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245]
 
 Data Portal of the European Environmental Research Infrastructures
 
+> Variables can be found in **documentation/[variable_list.csv](documentation/variable_list.csv)**
+
 
 ### Research Infrastructures
 
@@ -77,10 +79,6 @@ Tables:
 * default
 * iriscc-no2
 * iriscc-p10
-
-#### AnaEE
-
-Analysis and Experimentation on Ecosystems
 
 
 ## NERC, [ESV list](http://vocab.nerc.ac.uk/collection/EXV/current/)
