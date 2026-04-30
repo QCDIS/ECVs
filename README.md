@@ -22,7 +22,7 @@ Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245]
 
 ![img_ECVs-List.png](documentation/images/ECVs-List.png "ECVs List")
 
-## ENVRI-HUB
+## ENVRI-HUB, [website](https://envrihub.vm.fedcloud.eu/)
 
 Data Portal of the European Environmental Research Infrastructures
 
@@ -38,7 +38,7 @@ The variables can be found in **[variable list](documentation/BeaconAPI-variable
 * ICOS, Integrated Carbon Observation System
 * IRISCC, Integrated Research Infrastructure Services for Climate Change Risks
 
-Tables
+Supported tables in each research infrastructure.
 
 | ACTRIS         | ARGO      | CDI     | IAGOS    | ICOS    | IRISCC     |
 | -------------- | --------- | ------- | -------- | ------- | ---------- |
@@ -48,7 +48,11 @@ Tables
 | actris-nrt     | argo_core |         |          |         |            |
 
 
-## NERC, [ESV list](http://vocab.nerc.ac.uk/collection/EXV/current/)
+## Natural Environment Research Council [(NERC)](https://www.ukri.org/councils/nerc/)
+
+NERC is the driving force of investment in environmental science.
+
+### ESV list [(EXV)](http://vocab.nerc.ac.uk/collection/EXV/current/)
 
 | ID | Preferred Label |
 | -- | --------------- |
@@ -122,7 +126,7 @@ Tables
 | [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
 | [EXV057](https://goosocean.org/document/17509) | Zooplankton biomass and diversity |
 
-### [I-ADPOT](https://i-adopt.github.io/)
+### InteroperAble Descriptions of Observable Property Terminology [(I-ADPOT)](https://i-adopt.github.io/)
 
 * [Framework](https://github.com/i-adopt/framework/)
 * [Framework ontology](https://i-adopt.github.io/ontology/)
@@ -138,9 +142,12 @@ The mapping table on NERC, https://vocab.nerc.ac.uk/search_nvs/cmap/?a=P02&b=P07
 
 | P02 Identifier | P02 Preferred label | P07 Identifier | P07 Preferred label | Mapping URL | Status |
 | -------------- | ------------------- | -------------- | ------------------- | ----------- | ------ |
-| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0381 | sea_surface_temperature         | 32201  http://vocab.nerc.ac.uk/mapping/I/32201/  | accepted |
-| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0335 | sea_water_temperature           | 32203  http://vocab.nerc.ac.uk/mapping/I/32203/  | accepted |
-| SDN:P02::PSST  | Skin temperature of the water column | SDN:P07::CFV9N3   | sea_surface_subskin_temperature | 154843 http://vocab.nerc.ac.uk/mapping/I/154843/ | accepted |
+| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0381 | sea_surface_temperature         | [32201](http://vocab.nerc.ac.uk/mapping/I/32201/)   | accepted |
+| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0335 | sea_water_temperature           | [32203](http://vocab.nerc.ac.uk/mapping/I/32203/)   | accepted |
+| SDN:P02::PSST  | Skin temperature of the water column | SDN:P07::CFV9N3   | sea_surface_subskin_temperature | [154843](http://vocab.nerc.ac.uk/mapping/I/154843/) | accepted |
+
+![img_NERC-NVS_Search-EXV002-Surface_temperature.png](documentation/images/NERC-NVS_Search-EXV002-Surface_temperature.png "NERC_NVS Search, EXV002, Surface temperature")
+
 
 ## TODO
 
