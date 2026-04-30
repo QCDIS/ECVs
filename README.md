@@ -26,7 +26,7 @@ Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245]
 
 Data Portal of the European Environmental Research Infrastructures
 
-> Variables can be found in **documentation/[variable_list.csv](documentation/variable_list.csv)**
+The variables can be found in **[variable list](documentation/BeaconAPI-variable_list.csv)**.
 
 
 ### Research Infrastructures
