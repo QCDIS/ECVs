@@ -155,6 +155,18 @@ Tables:
 | [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
 | [EXV057](https://goosocean.org/document/17509) | Zooplankton biomass and diversity |
 
+### Example vocabulary
+
+#### [EXV002](https://vocab.nerc.ac.uk/collection/EXV/current/EXV002/) (Surface temperature) in [P02](https://vocab.nerc.ac.uk/collection/P02/current/) (SeaDataNet Parameter Discovery Vocabulary) and [P07](https://vocab.nerc.ac.uk/collection/P07/current/) (Climate and Forecast Standard Names)
+
+The mapping table on NERC, https://vocab.nerc.ac.uk/search_nvs/cmap/?a=P02&b=P07
+
+| P02 Identifier | P02 Preferred label | P07 Identifier | P07 Preferred label | Mapping URL | Status |
+| -------------- | ------------------- | -------------- | ------------------- | ----------- | ------ |
+| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0381 | sea_surface_temperature         | 32201  http://vocab.nerc.ac.uk/mapping/I/32201/  | accepted |
+| SDN:P02::TEMP  | Temperature of the water column      | SDN:P07::CFSN0335 | sea_water_temperature           | 32203  http://vocab.nerc.ac.uk/mapping/I/32203/  | accepted |
+| SDN:P02::PSST  | Skin temperature of the water column | SDN:P07::CFV9N3   | sea_surface_subskin_temperature | 154843 http://vocab.nerc.ac.uk/mapping/I/154843/ | accepted |
+
 ### [I-ADPOT](https://i-adopt.github.io/)
 
 * [Framework](https://github.com/i-adopt/framework/)
