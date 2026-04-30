@@ -31,54 +31,21 @@ The variables can be found in **[variable list](documentation/BeaconAPI-variable
 
 ### Research Infrastructures
 
-#### ACTRIS
+* ACTRIS, Aerosol, Clouds, and Trace Gases Research Infrastructure
+* ARGO, Real-time global ocean in situ observing system
+* CDI, SeaDataNet Common Data Index (CDI) service
+* IAGOS, In-service Aircraft for a Global Observing System
+* ICOS, Integrated Carbon Observation System
+* IRISCC, Integrated Research Infrastructure Services for Climate Change Risks
 
-Aerosol, Clouds, and Trace Gases Research Infrastructure
+Tables
 
-Tables:
-* default
-* actris
-* actris-in-situ
-* actris-nrt
-
-#### ARGO
-
-Real-time global ocean in situ observing system
-
-Tables:
-* default
-* argo
-* argo_bgc
-* argo_core
-
-#### CDI
-
-SeaDataNet Common Data Index (CDI) service
-
-Tables:
-* default
-
-#### IAGOS
-
-In-service Aircraft for a Global Observing System
-
-Tables:
-* default
-* iagos-l1
-* iagos-l2
-
-#### ICOS
-
-Integrated Carbon Observation System
-
-#### IRISCC
-
-Integrated Research Infrastructure Services for Climate Change Risks
-
-Tables:
-* default
-* iriscc-no2
-* iriscc-p10
+| ACTRIS         | ARGO      | CDI     | IAGOS    | ICOS    | IRISCC     |
+| -------------- | --------- | ------- | -------- | ------- | ---------- |
+| default        | default   | default | default  | default | default    |
+| actris         | argo      |         | iagos-l1 |         | iriscc-no2 |
+| actris-in-situ | argo_bgc  |         | iagos-l2 |         | iriscc-p10 |
+| actris-nrt     | argo_core |         |          |         |            |
 
 
 ## NERC, [ESV list](http://vocab.nerc.ac.uk/collection/EXV/current/)
