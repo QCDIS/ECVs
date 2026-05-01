@@ -24,7 +24,7 @@ The variables can be found in **[variable list](documentation/BeaconAPI-variable
 * [ICOS](https://www.icos-cp.eu/), Integrated Carbon Observation System
 * [IRISCC](https://www.iriscc.eu/), Integrated Research Infrastructure Services for Climate Change Risks
 
-Supported tables in each research infrastructure.
+The tables in each research infrastructure, available through Beacon (Maris) [nodes](https://maris-development.github.io/beacon/available-nodes/available-nodes.html).
 
 | ACTRIS         | ARGO      | CDI     | IAGOS    | ICOS    | IRISCC     |
 | -------------- | --------- | ------- | -------- | ------- | ---------- |
@@ -37,8 +37,44 @@ Supported tables in each research infrastructure.
 ## Natural Environment Research Council [(NERC)](https://www.ukri.org/councils/nerc/)
 
 NERC is the driving force of investment in environmental science.
+The NERC Vocabulary Server [(NVS)](https://vocab.nerc.ac.uk/) is a service providing access to centrally managed and uniquely identified lists of terms for annotating data in the marine and related earth science domains.
+In the NVS, each vocabulary is a SKOS collection (e.g. https://vocab.nerc.ac.uk/collection/L22/current/) that has many terms that are SKOS concepts (e.g. https://vocab.nerc.ac.uk/collection/L22/current/TOOL1248/).
 
-### ESV list [(EXV)](http://vocab.nerc.ac.uk/collection/EXV/current/)
+### NERC Tools
+
+#### Querying vocabulary
+
+Several tools for querying existing vocabulary collections:
+
+* NVS Vocab Search: Searches entire NVS content (options to search for terms in a given collection, in any collection, search for entire collections, or explore mappings)
+* SeaDataNet Search: Focuses on collections used by SeaDataNet
+* SDN Facet search: Searches P01 codes with filters
+* SDN parameter discovery: Displays relationships among collections
+* NVS Feed: Provides updates on concept collections
+* NVS LDES Feed: Publishes latest concept changes in Turtle format. Concept updates will typically be accessible post 11:00 AM GMT. There is one feed per collection and can be accessed using the following url structure 
+
+#### InteroperAble Descriptions of Observable Property Terminology [(I-ADPOT)](https://i-adopt.github.io/)
+
+I-ADPOT is a Research Data Alliance initiative that developed a framework to harmonize how scientific variable descriptions (observable properties) are structured. The framework enables machine-readable data, enhancing semantic interoperability by decomposing variable names into components like Matrix, Object of Interest, and Property.
+
+Key aspects of the I-ADOPT Working Group and its outputs:
+
+* Purpose: To tackle the lack of interoperability between different terminology sources describing observational data (e.g., in Earth, marine, and environmental sciences).
+* Framework Structure: The I-ADOPT Framework uses a semantic structure to define what was measured, computed, or observed, ensuring machine-readability.
+* Terminology Mapping: It supports the NERC Vocabulary Server (NVS) in mapping local data to standard vocabularies.
+* Key Components: The framework includes components such as Variable, Entity (ObjectOfInterest, Matrix), Property, and Constraint.
+* Adoption: The recommendations from the group were endorsed by the RDA in 2022 and focus on FAIR (Findable, Accessible, Interoperable, Reusable) principles.
+
+The following resources are useful to better understand I-ADOPT:
+
+* [Framework](https://github.com/i-adopt/framework/)
+* [Framework ontology](https://i-adopt.github.io/ontology/)
+* [User Stories](https://github.com/i-adopt/users_stories/)
+* [Visualizer](https://sirkos.github.io/iadopt-vis/)
+* [Examples](https://github.com/mabablue/I-ADOPT-examples-playground/)
+
+
+### ESV list in NERC [(EXV)](http://vocab.nerc.ac.uk/collection/EXV/current/)
 
 | ID | Preferred Label |
 | -- | --------------- |
@@ -112,13 +148,6 @@ NERC is the driving force of investment in environmental science.
 | [EXV008](https://gcos.wmo.int/en/essential-climate-variables/upper-wind) | Upper-air wind speed and direction |
 | [EXV057](https://goosocean.org/document/17509) | Zooplankton biomass and diversity |
 
-### InteroperAble Descriptions of Observable Property Terminology [(I-ADPOT)](https://i-adopt.github.io/)
-
-* [Framework](https://github.com/i-adopt/framework/)
-* [Framework ontology](https://i-adopt.github.io/ontology/)
-* [User Stories](https://github.com/i-adopt/users_stories/)
-* [Visualizer](https://sirkos.github.io/iadopt-vis/)
-* [Examples](https://github.com/mabablue/I-ADOPT-examples-playground/)
 
 ### Example vocabulary
 
