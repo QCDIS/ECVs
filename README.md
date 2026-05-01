@@ -2,23 +2,9 @@
 
 ## About Essential Climate Variables
 
-An Essential Climate Variable (ECV) is a physical, chemical or biological variable or a group of linked variables that critically contributes to the characterization of Earth’s climate. Global Climate Observing System ([GCOS](https://gcos.wmo.int/site/global-climate-observing-system-gcos)) currently specifies [55 ECVs](https://gcos.wmo.int/site/global-climate-observing-system-gcos/essential-climate-variables).
+An Essential Climate Variable (ECV) is a physical, chemical or biological variable or a group of linked variables that critically contributes to the characterization of Earth’s climate. Global Climate Observing System ([GCOS](https://gcos.wmo.int/site/global-climate-observing-system-gcos)) currently specifies [55 ECVs](https://gcos.wmo.int/site/global-climate-observing-system-gcos/essential-climate-variables). Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245](https://library.wmo.int/records/item/58111-the-2022-gcos-ecvs-requirements)).
 
 ECV datasets provide the empirical evidence needed to understand and predict the evolution of climate, to guide mitigation and adaptation measures, to assess risks and enable attribution of climate events to underlying causes, and to underpin climate services. They are required to support the work of the UNFCCC and the IPCC.
-
-### ECV are identified based on the following criteria:
-
-* Relevance: The variable is critical for characterizing the climate system and its changes.
-* Feasibility: Observing or deriving the variable on a global scale is technically feasible using proven, scientifically understood methods.
-* Cost effectiveness: Generating and archiving data on the variable is affordable, mainly relying on coordinated observing systems using proven technology, taking advantage where possible of historical datasets.
-
-### ECV Observation Requirements
-
-Current ECV requirements according to the 2022 GCOS ECV Requirements ([GCOS-245](https://library.wmo.int/records/item/58111-the-2022-gcos-ecvs-requirements)):
-
-* Atmosphere
-* Ocean
-* Land
 
 ![img_ECVs-List.png](documentation/images/ECVs-List.png "ECVs List")
 
@@ -31,12 +17,12 @@ The variables can be found in **[variable list](documentation/BeaconAPI-variable
 
 ### Research Infrastructures
 
-* ACTRIS, Aerosol, Clouds, and Trace Gases Research Infrastructure
-* ARGO, Real-time global ocean in situ observing system
-* CDI, SeaDataNet Common Data Index (CDI) service
-* IAGOS, In-service Aircraft for a Global Observing System
-* ICOS, Integrated Carbon Observation System
-* IRISCC, Integrated Research Infrastructure Services for Climate Change Risks
+* [ACTRIS](https://www.actris.eu/), Aerosol, Clouds, and Trace Gases Research Infrastructure
+* [ARGO](https://www.euro-argo.eu/), Real-time global ocean in situ observing system
+* [CDI](https://www.seadatanet.org/Metadata/CDI-Common-Data-Index), SeaDataNet Common Data Index (CDI) service
+* [IAGOS](https://www.iagos.org/), In-service Aircraft for a Global Observing System
+* [ICOS](https://www.icos-cp.eu/), Integrated Carbon Observation System
+* [IRISCC](https://www.iriscc.eu/), Integrated Research Infrastructure Services for Climate Change Risks
 
 Supported tables in each research infrastructure.
 
