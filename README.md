@@ -99,13 +99,13 @@ The following resources are useful to better understand I-ADOPT:
 | EXV015 | Precursors (supporting the aerosol and ozone ECVs) | EXV048 | Land-surface temperature            | EXV031 | Transient tracers         |
 |        |                                                    | EXV046 | Leaf area index                     |        | **Biological/Ecosystems** |
 |        |                                                    | EXV051 | Soil carbon                         | EXV035 | Marine habitat properties |
-|        |                                                    |        |                                     | _EXV066_ | _Mangrove cover and composition_          |
-|        |                                                    |        |                                     | _EXV064_ | _Seagrass cover and composition_          |
-|        |                                                    |        |                                     | _EXV065_ | _Macroalgal canopy cover and composition_ |
+|        |                                                    |        | **Human Use of Natural Resources**  | _EXV066_ | _Mangrove cover and composition_          |
+|        |                                                    | EXV053 | Anthropogenic greenhouse gas fluxes | _EXV064_ | _Seagrass cover and composition_          |
+|        |                                                    | EXV055 | Anthropogenic water use             | _EXV065_ | _Macroalgal canopy cover and composition_ |
 |        |                                                    |        |                                     | _EXV063_ | _Coral cover and composition_             |
-|        |                                                    |        | **Human Use of Natural Resources**  | EXV034 | Plankton                  |
-|        |                                                    | EXV053 | Anthropogenic greenhouse gas fluxes | _EXV056_ | _Phytoplankton biomass and diversity_ |
-|        |                                                    | EXV055 | Anthropogenic water use             | _EXV057_ | _Zooplankton biomass and diversity_   |
+|        |                                                    |        |                                     | EXV034 | Plankton                  |
+|        |                                                    |        |                                     | _EXV056_ | _Phytoplankton biomass and diversity_ |
+|        |                                                    |        |                                     | _EXV057_ | _Zooplankton biomass and diversity_   |
 
 ### Some EOVs in NERC [(EXV)](http://vocab.nerc.ac.uk/collection/EXV/current/)
 
