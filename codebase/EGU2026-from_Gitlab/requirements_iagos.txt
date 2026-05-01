@@ -1,0 +1,4 @@
+SPARQLWrapper
+xarray
+netCDF4
+h5netcdf

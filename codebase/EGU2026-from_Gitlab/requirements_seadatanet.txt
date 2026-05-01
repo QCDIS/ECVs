@@ -1,0 +1,8 @@
+requests
+pandas
+jupyter
+shapely
+pillow
+cartopy
+matplotlib
+SPARQLWrapper

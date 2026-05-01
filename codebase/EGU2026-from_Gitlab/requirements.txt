@@ -1,0 +1,7 @@
+pandas
+requests
+jupyter
+shapely
+matplotlib
+pillow
+envrihub
