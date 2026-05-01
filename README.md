@@ -2,7 +2,7 @@
 
 **The primary objective of the ECVs VLab is to offer reusable components that enable users to support research activities, access ECVs, and develop domain-specific workflows.**
 
-The concept behind this VLab originates from the [ENVRI-Hub project](https://envrihub.vm.fedcloud.eu/), which serves as a central gateway to environmental data and services provided by European environmental research infrastructures. The hub delivers interoperable data across Earth system disciplines, making it readily accessible and easy to use for interdisciplinary environmental research.
+The concept behind ECVs VLab originates from the [ENVRI-Hub](https://envrihub.vm.fedcloud.eu/) project, which serves as a central gateway to environmental data and services provided by European environmental research infrastructures. The hub delivers interoperable data across Earth system disciplines, making it readily accessible and easy to use for interdisciplinary environmental research.
 
 ![img_ENVRI-Hub-About.jpg](documentation/images/ENVRI-Hub-About.jpg "ENVRI-Hub About")
 
