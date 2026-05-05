@@ -1,0 +1,868 @@
+{
+  "chart": {
+    "offset": {
+      "x": 155,
+      "y": 63
+    },
+    "scale": 1,
+    "nodes": {
+      "f9f223b0-cfca-4aa6-bcf3-266f6de114e7": {
+        "id": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+        "position": {
+          "x": 91.29998779296875,
+          "y": 340
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "argo_catalogue": {
+            "id": "argo_catalogue",
+            "type": "right",
+            "properties": {
+              "color": "#2dd259",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "right",
+            "properties": {
+              "color": "#783a74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "right",
+            "properties": {
+              "color": "#862d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "right",
+            "properties": {
+              "color": "#862d74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "right",
+            "properties": {
+              "color": "#bf4d40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "right",
+            "properties": {
+              "color": "#931f8c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "right",
+            "properties": {
+              "color": "#d279d1",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 169
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/26d2d248-7cf6-4540-a4b0-d5457ef02dc7/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.18",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.18"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "argo_catalogue",
+                "type": "str"
+              },
+              {
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_argo_catalogue",
+                "type": "str",
+                "default_value": "ocean temperature"
+              },
+              {
+                "name": "param_end_date",
+                "type": "str",
+                "default_value": "2025-01-01"
+              },
+              {
+                "name": "param_lat_max",
+                "type": "float",
+                "default_value": "48.34"
+              },
+              {
+                "name": "param_lat_min",
+                "type": "float",
+                "default_value": "42.17"
+              },
+              {
+                "name": "param_lon_max",
+                "type": "float",
+                "default_value": "18.98"
+              },
+              {
+                "name": "param_lon_min",
+                "type": "float",
+                "default_value": "10.7"
+              },
+              {
+                "name": "param_start_date",
+                "type": "str",
+                "default_value": "2024-01-01"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-argo-workflow-start-quan-pan-lifewatch-eu",
+            "description": "ecvs-argo-workflow-start-quan-pan-lifewatch-eu",
+            "created": "2026-05-05T18:29:58.312244Z",
+            "modified": "2026-05-05T18:29:59.158715Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-argo-workflow-start-quan-pan-lifewatch-eu:b48d859",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/7cb229fc55e1a657192ddf78e97c11cda07fb6b2/ecvs-argo-workflow-start-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 183
+        }
+      },
+      "65d4141f-6310-4c1c-8b6a-d234b88f26da": {
+        "id": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
+        "position": {
+          "x": 743.2999877929688,
+          "y": 399
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "query_param": {
+            "id": "query_param",
+            "type": "left",
+            "properties": {
+              "color": "#d2b579",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 17
+            }
+          },
+          "service_id": {
+            "id": "service_id",
+            "type": "left",
+            "properties": {
+              "color": "#783a5c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
+            }
+          },
+          "file_result": {
+            "id": "file_result",
+            "type": "right",
+            "properties": {
+              "color": "#79d2b5",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/113b3db5-854f-4d0e-97ff-846de6ebb463/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.18",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.18"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "query_param",
+                "type": "list"
+              },
+              {
+                "name": "service_id",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_result",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_NERC_VOCAB",
+                "assignation": "conf_SERVICE_URL_NERC_VOCAB = 'https://vocab.nerc.ac.uk/collection/EXV/current'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecv-argo-fetch-from-catalogue-quan-pan-lifewatch-eu",
+            "description": "ecv-argo-fetch-from-catalogue-quan-pan-lifewatch-eu",
+            "created": "2026-05-05T18:41:01.299783Z",
+            "modified": "2026-05-05T18:41:02.142349Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-fetch-from-catalogue-quan-pan-lifewatch-eu:4655657",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/2b4d8bea0e950116831101bd985fb9a1dfde70fd/ecv-argo-fetch-from-catalogue-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "30f36965-dfed-44ec-bbea-46a945267f4d": {
+        "id": "30f36965-dfed-44ec-bbea-46a945267f4d",
+        "position": {
+          "x": 418.29998779296875,
+          "y": 337
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "argo_catalogue": {
+            "id": "argo_catalogue",
+            "type": "left",
+            "properties": {
+              "color": "#2dd259",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "left",
+            "properties": {
+              "color": "#783a74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#862d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#862d74",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#bf4d40",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#931f8c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#d279d1",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "query_param": {
+            "id": "query_param",
+            "type": "right",
+            "properties": {
+              "color": "#d2b579",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 78
+            }
+          },
+          "service_id": {
+            "id": "service_id",
+            "type": "right",
+            "properties": {
+              "color": "#783a5c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 104
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/fb17e171-4b7e-445b-b586-57fcc73a765a/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.18",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.18"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              },
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "argo_catalogue",
+                "type": "str"
+              },
+              {
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "query_param",
+                "type": "list"
+              },
+              {
+                "name": "service_id",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_NERC_VOCAB",
+                "assignation": "conf_SERVICE_URL_NERC_VOCAB = 'https://vocab.nerc.ac.uk/collection/EXV/current'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecv-argo-search-catalogue-quan-pan-lifewatch-eu",
+            "description": "ecv-argo-search-catalogue-quan-pan-lifewatch-eu",
+            "created": "2026-05-05T18:52:08.461793Z",
+            "modified": "2026-05-05T18:52:09.292802Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-search-catalogue-quan-pan-lifewatch-eu:5581f60",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/06b0052414f47779a30e1d0aecc3f969f0a1cac1/ecv-argo-search-catalogue-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 183
+        }
+      }
+    },
+    "links": {
+      "c5da2b33-340d-424b-b4b1-39867885cf02": {
+        "id": "c5da2b33-340d-424b-b4b1-39867885cf02",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "argo_catalogue"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "argo_catalogue"
+        }
+      },
+      "f467b060-c790-43e1-ad1f-3ca55e98eb54": {
+        "id": "f467b060-c790-43e1-ad1f-3ca55e98eb54",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "end_date"
+        }
+      },
+      "1b709f65-a08e-42b2-a555-e23fe7949b0e": {
+        "id": "1b709f65-a08e-42b2-a555-e23fe7949b0e",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "lat_max"
+        }
+      },
+      "84e425a4-d942-4ac9-b054-72121ae42bc8": {
+        "id": "84e425a4-d942-4ac9-b054-72121ae42bc8",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "lat_min"
+        }
+      },
+      "506d6886-1c71-4a0e-b53c-48cce4a102db": {
+        "id": "506d6886-1c71-4a0e-b53c-48cce4a102db",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "lon_max"
+        }
+      },
+      "7d21e65e-83e2-4c20-a1f9-ed6b257318b8": {
+        "id": "7d21e65e-83e2-4c20-a1f9-ed6b257318b8",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "lon_min"
+        }
+      },
+      "d55e3dcd-75a0-4b21-98c8-ef69f3184b5d": {
+        "id": "d55e3dcd-75a0-4b21-98c8-ef69f3184b5d",
+        "from": {
+          "nodeId": "f9f223b0-cfca-4aa6-bcf3-266f6de114e7",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "start_date"
+        }
+      },
+      "43eddfe3-0aa1-4053-9c01-e8ada13a240f": {
+        "id": "43eddfe3-0aa1-4053-9c01-e8ada13a240f",
+        "from": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "query_param"
+        },
+        "to": {
+          "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
+          "portId": "query_param"
+        }
+      },
+      "342ab936-f775-4142-9104-814036ba6c89": {
+        "id": "342ab936-f775-4142-9104-814036ba6c89",
+        "from": {
+          "nodeId": "30f36965-dfed-44ec-bbea-46a945267f4d",
+          "portId": "service_id"
+        },
+        "to": {
+          "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
+          "portId": "service_id"
+        }
+      }
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
