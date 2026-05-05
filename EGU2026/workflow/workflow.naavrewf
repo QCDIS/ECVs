@@ -1,8 +1,8 @@
 {
   "chart": {
     "offset": {
-      "x": 155,
-      "y": 63
+      "x": -329,
+      "y": 111
     },
     "scale": 1,
     "nodes": {
@@ -759,6 +759,211 @@
           "width": 252,
           "height": 183
         }
+      },
+      "c9cc23f9-824e-45f5-8c34-70c861224361": {
+        "id": "c9cc23f9-824e-45f5-8c34-70c861224361",
+        "position": {
+          "x": 1112.1000061035156,
+          "y": 402
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "file_result": {
+            "id": "file_result",
+            "type": "left",
+            "properties": {
+              "color": "#79d2b5",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "file_figure": {
+            "id": "file_figure",
+            "type": "right",
+            "properties": {
+              "color": "#ac5371",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/7303e175-9d39-4b58-89fb-82242b276e03/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.1.18",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.1.18"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "sys",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "datetime",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "util",
+                "module": "importlib",
+                "asname": "importlib_util"
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyplot",
+                "module": "matplotlib",
+                "asname": "plt"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "geopandas",
+                "module": "",
+                "asname": "gpd"
+              },
+              {
+                "name": "dask",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xarray",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "xyzservices",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "geopy",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "rasterio",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "joblib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "mercantile",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "requests",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "deprecated",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pyarrow",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "file_result",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_figure",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_public_local_code",
+                "assignation": "conf_minio_public_local_code = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-public', f\"vl-{'ECVs'.lower()}\", 'code')"
+              },
+              {
+                "name": "conf_SERVICE_URL_NERC_VOCAB",
+                "assignation": "conf_SERVICE_URL_NERC_VOCAB = 'https://vocab.nerc.ac.uk/collection/EXV/current'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecv-argo-plot-quan-pan-lifewatch-eu",
+            "description": "ecv-argo-plot-quan-pan-lifewatch-eu",
+            "created": "2026-05-05T21:10:03.573382Z",
+            "modified": "2026-05-05T21:10:04.390325Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-plot-quan-pan-lifewatch-eu:b1c8750",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/d335a8f217e182b134146673026a7552e53a9059/ecv-argo-plot-quan-pan-lifewatch-eu",
+            "is_draft": false,
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
       }
     },
     "links": {
@@ -859,6 +1064,17 @@
         "to": {
           "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
           "portId": "service_id"
+        }
+      },
+      "d0b9597d-934e-41f1-a7b3-11d4f0cf60d5": {
+        "id": "d0b9597d-934e-41f1-a7b3-11d4f0cf60d5",
+        "from": {
+          "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
+          "portId": "file_result"
+        },
+        "to": {
+          "nodeId": "c9cc23f9-824e-45f5-8c34-70c861224361",
+          "portId": "file_result"
         }
       }
     },
