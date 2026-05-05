@@ -760,11 +760,11 @@
           "height": 183
         }
       },
-      "c9cc23f9-824e-45f5-8c34-70c861224361": {
-        "id": "c9cc23f9-824e-45f5-8c34-70c861224361",
+      "5c6468fb-dc14-4da9-9a5c-6cead57c3026": {
+        "id": "5c6468fb-dc14-4da9-9a5c-6cead57c3026",
         "position": {
-          "x": 1112.1000061035156,
-          "y": 402
+          "x": 1119.1000061035156,
+          "y": 401
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -796,7 +796,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/7303e175-9d39-4b58-89fb-82242b276e03/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d83cdcc7-c826-4133-8137-7bef5c782839/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -916,6 +916,14 @@
             ],
             "confs": [
               {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
                 "name": "conf_minio_user_local_data",
                 "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
               },
@@ -930,14 +938,6 @@
               {
                 "name": "conf_delimiter_csv",
                 "assignation": "conf_delimiter_csv = ','"
-              },
-              {
-                "name": "conf_vlab_name",
-                "assignation": "conf_vlab_name = 'ECVs'"
-              },
-              {
-                "name": "conf_minio_user_local_flog",
-                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
               }
             ],
             "params": [
@@ -950,12 +950,12 @@
             "secrets": [],
             "title": "ecv-argo-plot-quan-pan-lifewatch-eu",
             "description": "ecv-argo-plot-quan-pan-lifewatch-eu",
-            "created": "2026-05-05T21:10:03.573382Z",
-            "modified": "2026-05-05T21:10:04.390325Z",
-            "version": 2,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-plot-quan-pan-lifewatch-eu:b1c8750",
+            "created": "2026-05-05T21:33:59.876765Z",
+            "modified": "2026-05-05T21:34:01.498148Z",
+            "version": 3,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-plot-quan-pan-lifewatch-eu:94457f7",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/d335a8f217e182b134146673026a7552e53a9059/ecv-argo-plot-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/f8c284360190e42decc9cf9f74e5f95aad46b833/ecv-argo-plot-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
@@ -1066,19 +1066,22 @@
           "portId": "service_id"
         }
       },
-      "d0b9597d-934e-41f1-a7b3-11d4f0cf60d5": {
-        "id": "d0b9597d-934e-41f1-a7b3-11d4f0cf60d5",
+      "c9bdaaf0-b26b-4e2f-bebf-e30231d9e06d": {
+        "id": "c9bdaaf0-b26b-4e2f-bebf-e30231d9e06d",
         "from": {
           "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
           "portId": "file_result"
         },
         "to": {
-          "nodeId": "c9cc23f9-824e-45f5-8c34-70c861224361",
+          "nodeId": "5c6468fb-dc14-4da9-9a5c-6cead57c3026",
           "portId": "file_result"
         }
       }
     },
     "selected": {},
-    "hovered": {}
+    "hovered": {
+      "type": "node",
+      "id": "65d4141f-6310-4c1c-8b6a-d234b88f26da"
+    }
   }
 }
