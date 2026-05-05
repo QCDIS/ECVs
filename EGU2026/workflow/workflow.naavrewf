@@ -1,8 +1,8 @@
 {
   "chart": {
     "offset": {
-      "x": -329,
-      "y": 111
+      "x": -95,
+      "y": 89
     },
     "scale": 1,
     "nodes": {
@@ -760,11 +760,11 @@
           "height": 183
         }
       },
-      "5c6468fb-dc14-4da9-9a5c-6cead57c3026": {
-        "id": "5c6468fb-dc14-4da9-9a5c-6cead57c3026",
+      "84bf76f0-c4b2-481b-acc9-6781763f9cce": {
+        "id": "84bf76f0-c4b2-481b-acc9-6781763f9cce",
         "position": {
-          "x": 1119.1000061035156,
-          "y": 401
+          "x": 1129.1000061035156,
+          "y": 399
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -796,7 +796,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d83cdcc7-c826-4133-8137-7bef5c782839/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/ebc1bcef-3e10-47de-90cb-ac88b6990572/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -950,12 +950,12 @@
             "secrets": [],
             "title": "ecv-argo-plot-quan-pan-lifewatch-eu",
             "description": "ecv-argo-plot-quan-pan-lifewatch-eu",
-            "created": "2026-05-05T21:33:59.876765Z",
-            "modified": "2026-05-05T21:34:01.498148Z",
-            "version": 3,
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-plot-quan-pan-lifewatch-eu:94457f7",
+            "created": "2026-05-05T21:44:42.302862Z",
+            "modified": "2026-05-05T21:44:43.057983Z",
+            "version": 4,
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecv-argo-plot-quan-pan-lifewatch-eu:b8d4d82",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/f8c284360190e42decc9cf9f74e5f95aad46b833/ecv-argo-plot-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/9fe4d07c403b2a44af17440247364e814a1720f6/ecv-argo-plot-quan-pan-lifewatch-eu",
             "is_draft": false,
             "next_version": null
           }
@@ -1066,22 +1066,19 @@
           "portId": "service_id"
         }
       },
-      "c9bdaaf0-b26b-4e2f-bebf-e30231d9e06d": {
-        "id": "c9bdaaf0-b26b-4e2f-bebf-e30231d9e06d",
+      "b474b096-46a4-40dc-8893-c43e19288d65": {
+        "id": "b474b096-46a4-40dc-8893-c43e19288d65",
         "from": {
           "nodeId": "65d4141f-6310-4c1c-8b6a-d234b88f26da",
           "portId": "file_result"
         },
         "to": {
-          "nodeId": "5c6468fb-dc14-4da9-9a5c-6cead57c3026",
+          "nodeId": "84bf76f0-c4b2-481b-acc9-6781763f9cce",
           "portId": "file_result"
         }
       }
     },
     "selected": {},
-    "hovered": {
-      "type": "node",
-      "id": "65d4141f-6310-4c1c-8b6a-d234b88f26da"
-    }
+    "hovered": {}
   }
 }
