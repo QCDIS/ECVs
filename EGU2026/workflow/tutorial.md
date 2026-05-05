@@ -27,11 +27,11 @@ To execute the workflow do the following:
 ## Retrieve the output data
 
 In the `data` folder, you should see the result files from you workflow.
-* txt file: Summary of carbon stock
-* csv file: Predicted carbon stock table
+* jpg file: Plot of the data
+* csv file: Qureied data table
 
 You can download the file by doing right click, then pressing `download`.
 
-|    |    |    |    |
+| 1  | 2  | 3  | 4  |
 | -- | -- | -- | -- |
 | ![img_tutorial_06a-Result.png](images/tutorial_06a-Result.png "Result in data folder") | ![img_tutorial_06b-Result.png](images/tutorial_06b-Result.png "Result in data folder") | ![img_tutorial_06c-Result.png](images/tutorial_06c-Result.png "Result in data folder") | ![img_tutorial_06d-Result.png](images/tutorial_06d-Result.png "Result in data folder") |
