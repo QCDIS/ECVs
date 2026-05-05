@@ -145,3 +145,5 @@ The combine mapping table, https://vocab.nerc.ac.uk/search_nvs/cmap/?a=P02&b=P07
 * Add select table columns option
 * Add status of component execution, store the output file list
 * 
+
+![img_ECVs.drawio.png](documentation/images/ECVs.drawio.png "ECVs")
