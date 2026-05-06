@@ -1,3 +1,10 @@
+# EGU 26 workshop: Harnessing the ENVRI-Hub
+
+To follow the workshop at EGU, open [the workshop readme](./EGU2026/README.md).
+
+![EGU logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYMi5X4DL3x4Cqg7R2K-eJJ8DBr-wzGofoQ&s)
+![ENVRI HUB NEXT logo](https://www.fz-juelich.de/de/ice/ice-3/projekte/envri-hub-next.webp/@@images/image/preview)
+
 # Essential Climate Variables (ECVs) Virtual Lab (VLab)
 
 **The primary objective of the ECVs VLab is to offer reusable components that enable users to support research activities, access ECVs, and develop domain-specific workflows.**
