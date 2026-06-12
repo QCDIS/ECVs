@@ -215,3 +215,6 @@ __marimo__/
 
 example/
 Cloud Storage/
+model.png
+metamodel.keras
+.keras/keras.json
