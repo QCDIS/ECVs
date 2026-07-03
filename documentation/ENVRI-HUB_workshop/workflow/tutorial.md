@@ -1,8 +1,8 @@
-# How to run workflow
+# How to run the workflow
 
 This is the instruction on how to run the workflow.
 
-To run the workflow, you need to open the virtual lab in NaaVRE. If you are not in NaaVRE, click the link to the virtual lab (https://beta.naavre.net/vreapp/vl/ecvs) and press the `Launch my instance` button.
+To run the workflow, you need to open the virtual lab in NaaVRE. If you are not in NaaVRE, click the link to the virtual lab (https://beta.naavre.net/vreapp/vl/ecvs) and press the `Start Virtual Lab` button.
 
 ## Run the workflow using **parameter** input
 
