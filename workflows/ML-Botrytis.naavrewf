@@ -5,12 +5,831 @@
       "y": 0
     },
     "scale": 1,
-    "nodes": {},
-    "links": {},
+    "nodes": {
+      "2adb317a-f042-459d-9011-60be0a59a4ad": {
+        "id": "2adb317a-f042-459d-9011-60be0a59a4ad",
+        "position": {
+          "x": 331.8833312988281,
+          "y": 299
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "fname_metatraining": {
+            "id": "fname_metatraining",
+            "type": "right",
+            "properties": {
+              "color": "#3a7478",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "fname_observations": {
+            "id": "fname_observations",
+            "type": "right",
+            "properties": {
+              "color": "#d25e2d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "fname_weather": {
+            "id": "fname_weather",
+            "type": "right",
+            "properties": {
+              "color": "#82d279",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4daa057c-844e-4301-9216-30d871226517/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d06dec03-db88-412b-b5ef-a743ce2ec131/"
+              },
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4daa057c-844e-4301-9216-30d871226517/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "fname_metatraining",
+                "type": "str"
+              },
+              {
+                "name": "fname_observations",
+                "type": "str"
+              },
+              {
+                "name": "fname_weather",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_fname_metatraining_csv",
+                "type": "str",
+                "default_value": "input-metatraining.csv"
+              },
+              {
+                "name": "param_fname_observations_csv",
+                "type": "str",
+                "default_value": "input-observations.csv"
+              },
+              {
+                "name": "param_fname_weather_csv",
+                "type": "str",
+                "default_value": "input-weather.csv"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "description": "ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "created": "2026-08-12T14:08:01.799911Z",
+            "modified": "2026-08-12T14:08:03.014828Z",
+            "version": 2,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-get-botrytis-data-quan-pan-lifewatch-eu:8bf53d2",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/f40b20a1a16dcc61998e4ff4b0a135183463afc3/ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 79
+        }
+      },
+      "67365c29-48e7-4ec0-937a-926b96a36458": {
+        "id": "67365c29-48e7-4ec0-937a-926b96a36458",
+        "position": {
+          "x": 715.8833312988281,
+          "y": 262
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "fname_metatraining": {
+            "id": "fname_metatraining",
+            "type": "left",
+            "properties": {
+              "color": "#3a7478",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "fname_observations": {
+            "id": "fname_observations",
+            "type": "left",
+            "properties": {
+              "color": "#d25e2d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "fname_weather": {
+            "id": "fname_weather",
+            "type": "left",
+            "properties": {
+              "color": "#82d279",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "right",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "right",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "right",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "right",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "right",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "right",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "right",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 169
+            }
+          },
+          "file_metatraining": {
+            "id": "file_metatraining",
+            "type": "right",
+            "properties": {
+              "color": "#40bf91",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 195
+            }
+          },
+          "file_observations": {
+            "id": "file_observations",
+            "type": "right",
+            "properties": {
+              "color": "#79bcd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 221
+            }
+          },
+          "file_weather": {
+            "id": "file_weather",
+            "type": "right",
+            "properties": {
+              "color": "#2dd26c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 247
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "right",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 273
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6e6e4ac7-7f9d-4a44-a907-a769dec315a3/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0ba793c9-a2da-4c1f-9544-dadf1cf8947a/"
+              },
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6e6e4ac7-7f9d-4a44-a907-a769dec315a3/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "fname_metatraining",
+                "type": "str"
+              },
+              {
+                "name": "fname_observations",
+                "type": "str"
+              },
+              {
+                "name": "fname_weather",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "file_metatraining",
+                "type": "str"
+              },
+              {
+                "name": "file_observations",
+                "type": "str"
+              },
+              {
+                "name": "file_weather",
+                "type": "str"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_data_column_groupby",
+                "type": "str",
+                "default_value": "PartitionKey"
+              },
+              {
+                "name": "param_data_column_target",
+                "type": "str",
+                "default_value": "Botrite"
+              },
+              {
+                "name": "param_data_column_timestamp",
+                "type": "str",
+                "default_value": "RowKey"
+              },
+              {
+                "name": "param_data_column_train",
+                "type": "list",
+                "default_value": "[\"LW\", \"RH\", \"Rain\", \"Temperature\"]"
+              },
+              {
+                "name": "param_data_resample_freq",
+                "type": "str",
+                "default_value": "60Min"
+              },
+              {
+                "name": "param_data_resample_steps",
+                "type": "int",
+                "default_value": "240"
+              },
+              {
+                "name": "param_data_response_len",
+                "type": "int",
+                "default_value": "24"
+              },
+              {
+                "name": "param_ml_seed_value",
+                "type": "int",
+                "default_value": "42"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-start-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-start-quan-pan-lifewatch-eu",
+            "created": "2026-08-12T14:10:20.158784Z",
+            "modified": "2026-08-12T14:10:21.194457Z",
+            "version": 2,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-start-quan-pan-lifewatch-eu:6d97ef2",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/1b301ad5e0364d1045f822a6b13f3e39a2665a7b/ecvs-ml-start-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 287
+        }
+      },
+      "4fb5228e-11b9-4357-b03a-9427857b786e": {
+        "id": "4fb5228e-11b9-4357-b03a-9427857b786e",
+        "position": {
+          "x": 1214.8833312988281,
+          "y": 255
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "left",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "left",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "left",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "left",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "left",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "left",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "left",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "file_input_dataset": {
+            "id": "file_input_dataset",
+            "type": "left",
+            "properties": {
+              "color": "#d22d77",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "left",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "file_support_dataset": {
+            "id": "file_support_dataset",
+            "type": "right",
+            "properties": {
+              "color": "#a0c587",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/19385fcf-f090-4159-a204-9bc9812dedfa/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/19385fcf-f090-4159-a204-9bc9812dedfa/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "MinMaxScaler",
+                "module": "sklearn.preprocessing",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "random",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pickle",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "timedelta",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "randrange",
+                "module": "random",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "file_input_dataset",
+                "type": "str"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_support_dataset",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "created": "2026-08-12T14:27:03.142071Z",
+            "modified": "2026-08-12T14:27:04.044902Z",
+            "version": 1,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu:feb64fb",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/b9bc5ef14564d4f0180fb060ed842d74e6550bd4/ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 235
+        }
+      }
+    },
+    "links": {
+      "da728aa7-0f15-4a1a-b77b-4250a203a478": {
+        "id": "da728aa7-0f15-4a1a-b77b-4250a203a478",
+        "from": {
+          "nodeId": "2adb317a-f042-459d-9011-60be0a59a4ad",
+          "portId": "fname_metatraining"
+        },
+        "to": {
+          "nodeId": "67365c29-48e7-4ec0-937a-926b96a36458",
+          "portId": "fname_metatraining"
+        }
+      },
+      "8746e5a3-4d14-472d-ab7b-828dda4f40d7": {
+        "id": "8746e5a3-4d14-472d-ab7b-828dda4f40d7",
+        "from": {
+          "nodeId": "2adb317a-f042-459d-9011-60be0a59a4ad",
+          "portId": "fname_observations"
+        },
+        "to": {
+          "nodeId": "67365c29-48e7-4ec0-937a-926b96a36458",
+          "portId": "fname_observations"
+        }
+      },
+      "47815d24-61c9-4b75-b326-38443ad3ecdd": {
+        "id": "47815d24-61c9-4b75-b326-38443ad3ecdd",
+        "from": {
+          "nodeId": "2adb317a-f042-459d-9011-60be0a59a4ad",
+          "portId": "fname_weather"
+        },
+        "to": {
+          "nodeId": "67365c29-48e7-4ec0-937a-926b96a36458",
+          "portId": "fname_weather"
+        }
+      }
+    },
     "properties": {
       "params": []
     },
     "selected": {},
-    "hovered": {}
+    "hovered": {},
+    "metadata": {
+      "version": "1.1"
+    }
   }
 }
