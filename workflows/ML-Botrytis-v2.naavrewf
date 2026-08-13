@@ -1,0 +1,1985 @@
+{
+  "chart": {
+    "offset": {
+      "x": 48.1,
+      "y": 106.86
+    },
+    "scale": 0.515,
+    "nodes": {
+      "1ac2c8cc-e978-4bbb-816d-2b0345085512": {
+        "id": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+        "position": {
+          "x": 1069.0812738025793,
+          "y": 228.02782931354352
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "left",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "left",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "left",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "left",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "left",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "left",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "left",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "file_metatraining": {
+            "id": "file_metatraining",
+            "type": "left",
+            "properties": {
+              "color": "#40bf91",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "file_observations": {
+            "id": "file_observations",
+            "type": "left",
+            "properties": {
+              "color": "#79bcd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "file_weather": {
+            "id": "file_weather",
+            "type": "left",
+            "properties": {
+              "color": "#2dd26c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "left",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 273
+            }
+          },
+          "file_training_dataset": {
+            "id": "file_training_dataset",
+            "type": "right",
+            "properties": {
+              "color": "#3c931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/a03611be-5170-4b49-9a4f-22212c225e74/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/a03611be-5170-4b49-9a4f-22212c225e74/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "List",
+                "module": "typing",
+                "asname": null
+              },
+              {
+                "name": "MinMaxScaler",
+                "module": "sklearn.preprocessing",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "random",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "pickle",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "calendar",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "file_metatraining",
+                "type": "str"
+              },
+              {
+                "name": "file_observations",
+                "type": "str"
+              },
+              {
+                "name": "file_weather",
+                "type": "str"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_training_dataset",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-training-dataset-weather-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-training-dataset-weather-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T07:48:54.140988Z",
+            "modified": "2026-08-13T07:48:54.758975Z",
+            "version": 1,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-training-dataset-weather-quan-pan-lifewatch-eu:f2fc694",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/65c0dd184637c1ee9ec602e5efca6842a9753ca3/ecvs-ml-training-dataset-weather-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 287
+        }
+      },
+      "88ba726e-eac4-4a52-b82e-962b2859029b": {
+        "id": "88ba726e-eac4-4a52-b82e-962b2859029b",
+        "position": {
+          "x": 1881.2000122070312,
+          "y": 779
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "left",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "left",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "left",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "left",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "left",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "left",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "left",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "file_inpput_dataset": {
+            "id": "file_inpput_dataset",
+            "type": "left",
+            "properties": {
+              "color": "#2d7d86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "left",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "file_model_actual": {
+            "id": "file_model_actual",
+            "type": "right",
+            "properties": {
+              "color": "#40bf6a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "file_model_backbone": {
+            "id": "file_model_backbone",
+            "type": "right",
+            "properties": {
+              "color": "#d22d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "file_model_meta": {
+            "id": "file_model_meta",
+            "type": "right",
+            "properties": {
+              "color": "#2dd25e",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/3c18a0a2-49ca-4d34-8b1c-7991770ef536/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/3c18a0a2-49ca-4d34-8b1c-7991770ef536/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "Model",
+                "module": "keras",
+                "asname": null
+              },
+              {
+                "name": "train_test_split",
+                "module": "sklearn.model_selection",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "random",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "layers",
+                "module": "keras",
+                "asname": null
+              },
+              {
+                "name": "pickle",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "tensorflow",
+                "module": "",
+                "asname": "tf"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "file_inpput_dataset",
+                "type": "str"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_model_actual",
+                "type": "str"
+              },
+              {
+                "name": "file_model_backbone",
+                "type": "str"
+              },
+              {
+                "name": "file_model_meta",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_is_train_model",
+                "type": "int",
+                "default_value": "1"
+              },
+              {
+                "name": "param_ml_batch_size",
+                "type": "int",
+                "default_value": "16"
+              },
+              {
+                "name": "param_ml_epochs",
+                "type": "int",
+                "default_value": "12"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-build-model-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-build-model-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T07:51:41.886351Z",
+            "modified": "2026-08-13T07:51:42.559751Z",
+            "version": 1,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-build-model-quan-pan-lifewatch-eu:00f3316",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/fd825214e566295d2ead2bbeaf20034a2542f215/ecvs-ml-build-model-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 235
+        }
+      },
+      "e0cef62c-d059-4060-a628-0d515db7e01d": {
+        "id": "e0cef62c-d059-4060-a628-0d515db7e01d",
+        "position": {
+          "x": 2311.292726301781,
+          "y": 683.0169485289607
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "file_inpput_dataset": {
+            "id": "file_inpput_dataset",
+            "type": "left",
+            "properties": {
+              "color": "#2d7d86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "file_model_actual": {
+            "id": "file_model_actual",
+            "type": "left",
+            "properties": {
+              "color": "#40bf6a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "file_model_backbone": {
+            "id": "file_model_backbone",
+            "type": "left",
+            "properties": {
+              "color": "#d22d3a",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "file_model_meta": {
+            "id": "file_model_meta",
+            "type": "left",
+            "properties": {
+              "color": "#2dd25e",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "file_predict_actual": {
+            "id": "file_predict_actual",
+            "type": "right",
+            "properties": {
+              "color": "#cae06c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "file_predict_actual_csv": {
+            "id": "file_predict_actual_csv",
+            "type": "right",
+            "properties": {
+              "color": "#79d27e",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "file_predict_backbone": {
+            "id": "file_predict_backbone",
+            "type": "right",
+            "properties": {
+              "color": "#79ccd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "file_predict_meta": {
+            "id": "file_predict_meta",
+            "type": "right",
+            "properties": {
+              "color": "#a979d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6c10dd0e-004a-4257-a23e-73e06e71b853/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6c10dd0e-004a-4257-a23e-73e06e71b853/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "LinearDiscriminantAnalysis",
+                "module": "sklearn.discriminant_analysis",
+                "asname": null
+              },
+              {
+                "name": "confusion_matrix",
+                "module": "sklearn.metrics",
+                "asname": null
+              },
+              {
+                "name": "ConfusionMatrixDisplay",
+                "module": "sklearn.metrics",
+                "asname": null
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "keras",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pickle",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "file_inpput_dataset",
+                "type": "str"
+              },
+              {
+                "name": "file_model_actual",
+                "type": "str"
+              },
+              {
+                "name": "file_model_backbone",
+                "type": "str"
+              },
+              {
+                "name": "file_model_meta",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_predict_actual",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_actual_csv",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_backbone",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_meta",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_ml_batch_size",
+                "type": "int",
+                "default_value": "16"
+              },
+              {
+                "name": "param_ml_epochs",
+                "type": "int",
+                "default_value": "12"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T07:57:52.440958Z",
+            "modified": "2026-08-13T07:57:53.353913Z",
+            "version": 1,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-prediction-quan-pan-lifewatch-eu:1be88cd",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/331be08ae22925bedf7c033a34d65d884758a295/ecvs-ml-prediction-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 105
+        }
+      },
+      "bf266898-f741-42d5-a678-0abe51c4fced": {
+        "id": "bf266898-f741-42d5-a678-0abe51c4fced",
+        "position": {
+          "x": 1458.8630304205906,
+          "y": 513.9589041095893
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "left",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "left",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "left",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "left",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "left",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "left",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "left",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "file_input_dataset": {
+            "id": "file_input_dataset",
+            "type": "left",
+            "properties": {
+              "color": "#d22d77",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "left",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "file_support_dataset": {
+            "id": "file_support_dataset",
+            "type": "right",
+            "properties": {
+              "color": "#a0c587",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/580bd955-e7a6-4da0-a737-e1d196986ec2/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/19385fcf-f090-4159-a204-9bc9812dedfa/"
+              },
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/da27a4fe-700f-443d-bf37-5e6032cdd69f/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/580bd955-e7a6-4da0-a737-e1d196986ec2/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "List",
+                "module": "typing",
+                "asname": null
+              },
+              {
+                "name": "MinMaxScaler",
+                "module": "sklearn.preprocessing",
+                "asname": null
+              },
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "random",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              },
+              {
+                "name": "pickle",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "pandas",
+                "module": "",
+                "asname": "pd"
+              },
+              {
+                "name": "matplotlib.pyplot",
+                "module": "",
+                "asname": "plt"
+              },
+              {
+                "name": "calendar",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "timedelta",
+                "module": "datetime",
+                "asname": null
+              },
+              {
+                "name": "randrange",
+                "module": "random",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "file_input_dataset",
+                "type": "str"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_support_dataset",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T08:33:51.827036Z",
+            "modified": "2026-08-13T08:33:52.614357Z",
+            "version": 3,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu:0802f65",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/ebc0c96b1fb45d56fb0701345511e713ce135259/ecvs-ml-support-dataset-pathogen-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 235
+        }
+      },
+      "36116d34-1888-431d-8cfb-fb4bfa5221ed": {
+        "id": "36116d34-1888-431d-8cfb-fb4bfa5221ed",
+        "position": {
+          "x": 591.0635865661962,
+          "y": 329.7663450834881
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "file_metatraining": {
+            "id": "file_metatraining",
+            "type": "right",
+            "properties": {
+              "color": "#40bf91",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "file_observations": {
+            "id": "file_observations",
+            "type": "right",
+            "properties": {
+              "color": "#79bcd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "file_weather": {
+            "id": "file_weather",
+            "type": "right",
+            "properties": {
+              "color": "#2dd26c",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/1fcc9ba7-a1ef-4f09-bd42-b8667cb5981d/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d06dec03-db88-412b-b5ef-a743ce2ec131/"
+              },
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4daa057c-844e-4301-9216-30d871226517/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/5296ebfe-c5e6-45ea-bac8-d0a75b3219ca/"
+              },
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/1fcc9ba7-a1ef-4f09-bd42-b8667cb5981d/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "file_metatraining",
+                "type": "str"
+              },
+              {
+                "name": "file_observations",
+                "type": "str"
+              },
+              {
+                "name": "file_weather",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_fname_metatraining_csv",
+                "type": "str",
+                "default_value": "input-metatraining.csv"
+              },
+              {
+                "name": "param_fname_observations_csv",
+                "type": "str",
+                "default_value": "input-observations.csv"
+              },
+              {
+                "name": "param_fname_weather_csv",
+                "type": "str",
+                "default_value": "input-weather.csv"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "description": "ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T09:09:35.838169Z",
+            "modified": "2026-08-13T09:09:36.477007Z",
+            "version": 4,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-get-botrytis-data-quan-pan-lifewatch-eu:961739c",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/0c92ab426c05cf229120fc5360e38a99dee7febe/ecvs-get-botrytis-data-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 79
+        }
+      },
+      "edc00efd-71cf-4b30-8750-c7813bb919cc": {
+        "id": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+        "position": {
+          "x": 602.8170801602788,
+          "y": 714.5577008766835
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "column_groupby": {
+            "id": "column_groupby",
+            "type": "right",
+            "properties": {
+              "color": "#4068bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "column_target": {
+            "id": "column_target",
+            "type": "right",
+            "properties": {
+              "color": "#86622d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "column_timestamp": {
+            "id": "column_timestamp",
+            "type": "right",
+            "properties": {
+              "color": "#409fbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "column_train": {
+            "id": "column_train",
+            "type": "right",
+            "properties": {
+              "color": "#2d6e86",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "data_resample_freq": {
+            "id": "data_resample_freq",
+            "type": "right",
+            "properties": {
+              "color": "#934e1f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "data_resample_steps": {
+            "id": "data_resample_steps",
+            "type": "right",
+            "properties": {
+              "color": "#761f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          },
+          "data_response_len": {
+            "id": "data_response_len",
+            "type": "right",
+            "properties": {
+              "color": "#44931f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 169
+            }
+          },
+          "seed_value": {
+            "id": "seed_value",
+            "type": "right",
+            "properties": {
+              "color": "#1f8093",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 195
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d1eb99dc-798d-4fc4-bad5-e78d9d99585f/",
+            "owner": "quan.pan@lifewatch.eu",
+            "virtual_lab": "ecvs",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "versions": [
+              {
+                "version": 1,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0ba793c9-a2da-4c1f-9544-dadf1cf8947a/"
+              },
+              {
+                "version": 2,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/6e6e4ac7-7f9d-4a44-a907-a769dec315a3/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/dc632937-4d75-4b02-8419-380bf46f125c/"
+              },
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/d1eb99dc-798d-4fc4-bad5-e78d9d99585f/"
+              }
+            ],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-build:v0.3.14",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-ecvs-cell-runtime:v0.3.14"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "column_groupby",
+                "type": "str"
+              },
+              {
+                "name": "column_target",
+                "type": "str"
+              },
+              {
+                "name": "column_timestamp",
+                "type": "str"
+              },
+              {
+                "name": "column_train",
+                "type": "list"
+              },
+              {
+                "name": "data_resample_freq",
+                "type": "str"
+              },
+              {
+                "name": "data_resample_steps",
+                "type": "int"
+              },
+              {
+                "name": "data_response_len",
+                "type": "int"
+              },
+              {
+                "name": "seed_value",
+                "type": "int"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_dir_data_local_tmp",
+                "assignation": "conf_dir_data_local_tmp = os.path.join('/', 'tmp', 'data')"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
+              {
+                "name": "conf_minio_user_local_flog",
+                "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [
+              {
+                "name": "param_data_column_groupby",
+                "type": "str",
+                "default_value": "PartitionKey"
+              },
+              {
+                "name": "param_data_column_target",
+                "type": "str",
+                "default_value": "Botrite"
+              },
+              {
+                "name": "param_data_column_timestamp",
+                "type": "str",
+                "default_value": "RowKey"
+              },
+              {
+                "name": "param_data_column_train",
+                "type": "list",
+                "default_value": "[\"LW\", \"RH\", \"Rain\", \"Temperature\"]"
+              },
+              {
+                "name": "param_data_resample_freq",
+                "type": "str",
+                "default_value": "60Min"
+              },
+              {
+                "name": "param_data_resample_steps",
+                "type": "int",
+                "default_value": "240"
+              },
+              {
+                "name": "param_data_response_len",
+                "type": "int",
+                "default_value": "24"
+              },
+              {
+                "name": "param_ml_seed_value",
+                "type": "int",
+                "default_value": "42"
+              },
+              {
+                "name": "param_workflow_name",
+                "type": "str",
+                "default_value": "workflow name"
+              }
+            ],
+            "secrets": [],
+            "title": "ecvs-ml-start-quan-pan-lifewatch-eu",
+            "description": "ecvs-ml-start-quan-pan-lifewatch-eu",
+            "created": "2026-08-13T09:09:04.175486Z",
+            "modified": "2026-08-13T09:09:04.815268Z",
+            "version": 4,
+            "template_format": "v1",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-start-quan-pan-lifewatch-eu:cab3fc0",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/fab4da8defa5919e251c3799952b5cee42bbec91/ecvs-ml-start-quan-pan-lifewatch-eu",
+            "is_draft": false
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 209
+        }
+      }
+    },
+    "links": {
+      "782fa4c9-7d20-462c-ba1a-578fcb0198b8": {
+        "id": "782fa4c9-7d20-462c-ba1a-578fcb0198b8",
+        "from": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "file_model_actual"
+        },
+        "to": {
+          "nodeId": "e0cef62c-d059-4060-a628-0d515db7e01d",
+          "portId": "file_model_actual"
+        }
+      },
+      "5917ebd8-c60e-490e-aa3c-8acc806fd6a4": {
+        "id": "5917ebd8-c60e-490e-aa3c-8acc806fd6a4",
+        "from": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "file_model_backbone"
+        },
+        "to": {
+          "nodeId": "e0cef62c-d059-4060-a628-0d515db7e01d",
+          "portId": "file_model_backbone"
+        }
+      },
+      "881e870f-e3e5-42a3-952a-0aeaa64f9141": {
+        "id": "881e870f-e3e5-42a3-952a-0aeaa64f9141",
+        "from": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "file_model_meta"
+        },
+        "to": {
+          "nodeId": "e0cef62c-d059-4060-a628-0d515db7e01d",
+          "portId": "file_model_meta"
+        }
+      },
+      "23e28b76-cc72-4433-9bec-b261c96d25a8": {
+        "id": "23e28b76-cc72-4433-9bec-b261c96d25a8",
+        "from": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "file_training_dataset"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "file_input_dataset"
+        }
+      },
+      "24cf8c9b-0bb2-4da0-96ed-fa252e5777ca": {
+        "id": "24cf8c9b-0bb2-4da0-96ed-fa252e5777ca",
+        "from": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "file_support_dataset"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "file_inpput_dataset"
+        }
+      },
+      "353552d4-11f3-4cce-b992-5ac884b94eb3": {
+        "id": "353552d4-11f3-4cce-b992-5ac884b94eb3",
+        "from": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "file_support_dataset"
+        },
+        "to": {
+          "nodeId": "e0cef62c-d059-4060-a628-0d515db7e01d",
+          "portId": "file_inpput_dataset"
+        }
+      },
+      "6a24712f-13b8-467e-8173-941eaa832d07": {
+        "id": "6a24712f-13b8-467e-8173-941eaa832d07",
+        "from": {
+          "nodeId": "36116d34-1888-431d-8cfb-fb4bfa5221ed",
+          "portId": "file_metatraining"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "file_metatraining"
+        }
+      },
+      "1bb2d0b6-d481-4aa8-bf41-c147eec6f464": {
+        "id": "1bb2d0b6-d481-4aa8-bf41-c147eec6f464",
+        "from": {
+          "nodeId": "36116d34-1888-431d-8cfb-fb4bfa5221ed",
+          "portId": "file_observations"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "file_observations"
+        }
+      },
+      "e70f89d9-3c8a-458a-ad9b-4c970e5aa050": {
+        "id": "e70f89d9-3c8a-458a-ad9b-4c970e5aa050",
+        "from": {
+          "nodeId": "36116d34-1888-431d-8cfb-fb4bfa5221ed",
+          "portId": "file_weather"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "file_weather"
+        }
+      },
+      "a79af3e9-6fe1-4bf2-94c8-86701cc1dc0f": {
+        "id": "a79af3e9-6fe1-4bf2-94c8-86701cc1dc0f",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_groupby"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "column_groupby"
+        }
+      },
+      "3317db9a-ba5b-4b27-8439-fed833b15c85": {
+        "id": "3317db9a-ba5b-4b27-8439-fed833b15c85",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_target"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "column_target"
+        }
+      },
+      "0e063097-3ee4-4b5a-bdd4-e8f70f77b253": {
+        "id": "0e063097-3ee4-4b5a-bdd4-e8f70f77b253",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_timestamp"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "column_timestamp"
+        }
+      },
+      "8a4fbc44-1c74-4ce3-a645-69aaff89a042": {
+        "id": "8a4fbc44-1c74-4ce3-a645-69aaff89a042",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_train"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "column_train"
+        }
+      },
+      "6c713bc2-f887-4423-88bb-7683e9b861e6": {
+        "id": "6c713bc2-f887-4423-88bb-7683e9b861e6",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_freq"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "data_resample_freq"
+        }
+      },
+      "e96a6d48-0410-4c75-94f6-fc69824a222a": {
+        "id": "e96a6d48-0410-4c75-94f6-fc69824a222a",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_steps"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "data_resample_steps"
+        }
+      },
+      "7452691a-8f6f-4929-b43d-1c886c933128": {
+        "id": "7452691a-8f6f-4929-b43d-1c886c933128",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_response_len"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "data_response_len"
+        }
+      },
+      "48d19d57-e66d-4642-ae00-4a95713493bc": {
+        "id": "48d19d57-e66d-4642-ae00-4a95713493bc",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "seed_value"
+        },
+        "to": {
+          "nodeId": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
+          "portId": "seed_value"
+        }
+      },
+      "4f78864e-c174-4e84-9bf0-f33dd4a98fee": {
+        "id": "4f78864e-c174-4e84-9bf0-f33dd4a98fee",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_groupby"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "column_groupby"
+        }
+      },
+      "1cf67f18-7058-4ddf-ad8a-7357e912d015": {
+        "id": "1cf67f18-7058-4ddf-ad8a-7357e912d015",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_target"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "column_target"
+        }
+      },
+      "66085215-0a01-470a-b55d-46050dfd0caa": {
+        "id": "66085215-0a01-470a-b55d-46050dfd0caa",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_timestamp"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "column_timestamp"
+        }
+      },
+      "503cd139-4ff1-4ad4-80a4-1e641e7da63a": {
+        "id": "503cd139-4ff1-4ad4-80a4-1e641e7da63a",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_train"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "column_train"
+        }
+      },
+      "a82f5471-9b22-475f-8aef-144f47717291": {
+        "id": "a82f5471-9b22-475f-8aef-144f47717291",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_freq"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "data_resample_freq"
+        }
+      },
+      "70599620-5f07-423d-9db1-68fa62fd0c24": {
+        "id": "70599620-5f07-423d-9db1-68fa62fd0c24",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_steps"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "data_resample_steps"
+        }
+      },
+      "62d3a959-3eae-4e81-8ef8-a25e0fbdff70": {
+        "id": "62d3a959-3eae-4e81-8ef8-a25e0fbdff70",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_response_len"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "data_response_len"
+        }
+      },
+      "7d12bb2e-9dec-400a-99da-8d4e2747238c": {
+        "id": "7d12bb2e-9dec-400a-99da-8d4e2747238c",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "seed_value"
+        },
+        "to": {
+          "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
+          "portId": "seed_value"
+        }
+      },
+      "26af505f-c7c0-42f3-9617-12e292c38293": {
+        "id": "26af505f-c7c0-42f3-9617-12e292c38293",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_groupby"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "column_groupby"
+        }
+      },
+      "2fe6cd6f-49fa-4d15-aa06-20e4068627d4": {
+        "id": "2fe6cd6f-49fa-4d15-aa06-20e4068627d4",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_target"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "column_target"
+        }
+      },
+      "ee479638-f6b9-4f23-83fc-4a9d4b3af75a": {
+        "id": "ee479638-f6b9-4f23-83fc-4a9d4b3af75a",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_timestamp"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "column_timestamp"
+        }
+      },
+      "baf43109-482e-4440-b233-838126892fed": {
+        "id": "baf43109-482e-4440-b233-838126892fed",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "seed_value"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "seed_value"
+        }
+      },
+      "037f0932-b8ee-4bd1-b350-381b62c6a0c5": {
+        "id": "037f0932-b8ee-4bd1-b350-381b62c6a0c5",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "column_train"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "column_train"
+        }
+      },
+      "6d8aa790-219d-4656-8ea9-ad935f5d1e05": {
+        "id": "6d8aa790-219d-4656-8ea9-ad935f5d1e05",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_freq"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "data_resample_freq"
+        }
+      },
+      "ee9cc686-49f6-4f85-9a0d-8fd20f0b3fbe": {
+        "id": "ee9cc686-49f6-4f85-9a0d-8fd20f0b3fbe",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_resample_steps"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "data_resample_steps"
+        }
+      },
+      "b535b054-06f4-4bf9-9d5d-26a61a314df3": {
+        "id": "b535b054-06f4-4bf9-9d5d-26a61a314df3",
+        "from": {
+          "nodeId": "edc00efd-71cf-4b30-8750-c7813bb919cc",
+          "portId": "data_response_len"
+        },
+        "to": {
+          "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
+          "portId": "data_response_len"
+        }
+      }
+    },
+    "properties": {
+      "params": []
+    },
+    "selected": {},
+    "hovered": {},
+    "metadata": {
+      "version": "1.1"
+    }
+  }
+}
