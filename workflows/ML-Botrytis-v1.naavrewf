@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": 295.62,
-      "y": 226.03
+      "x": 324.83,
+      "y": 166.84
     },
-    "scale": 0.403,
+    "scale": 0.378,
     "nodes": {
       "2adb317a-f042-459d-9011-60be0a59a4ad": {
         "id": "2adb317a-f042-459d-9011-60be0a59a4ad",
@@ -469,8 +469,8 @@
       "88ba726e-eac4-4a52-b82e-962b2859029b": {
         "id": "88ba726e-eac4-4a52-b82e-962b2859029b",
         "position": {
-          "x": 1881.2000122070312,
-          "y": 779
+          "x": 1894.4275254345448,
+          "y": 879.5291005291009
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1437,11 +1437,11 @@
           "height": 235
         }
       },
-      "fd603830-7c14-436d-864b-ce976566d262": {
-        "id": "fd603830-7c14-436d-864b-ce976566d262",
+      "7abf7829-6119-45a0-be27-f2102f6ac8e9": {
+        "id": "7abf7829-6119-45a0-be27-f2102f6ac8e9",
         "position": {
-          "x": 2288.3400244140626,
-          "y": 707.54
+          "x": 2390.978012881287,
+          "y": 739.9770241705726
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1493,11 +1493,59 @@
               "x": -2,
               "y": 91
             }
+          },
+          "file_predict_actual_csv": {
+            "id": "file_predict_actual_csv",
+            "type": "right",
+            "properties": {
+              "color": "#79d27e",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "file_predict_actual_fig": {
+            "id": "file_predict_actual_fig",
+            "type": "right",
+            "properties": {
+              "color": "#2d2fd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "file_predict_backbone_fig": {
+            "id": "file_predict_backbone_fig",
+            "type": "right",
+            "properties": {
+              "color": "#4440bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "file_predict_meta_fig": {
+            "id": "file_predict_meta_fig",
+            "type": "right",
+            "properties": {
+              "color": "#931f55",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/94f64101-c9db-4e41-9f0d-487675dfddaa/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0dcb443e-efca-46f7-ba70-ca9f8c98ea24/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -1510,6 +1558,14 @@
               {
                 "version": 2,
                 "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/94f64101-c9db-4e41-9f0d-487675dfddaa/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/88eff1ab-9f6f-4f8c-9a9f-7e7141f84824/"
+              },
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0dcb443e-efca-46f7-ba70-ca9f8c98ea24/"
               }
             ],
             "base_container_image": {
@@ -1581,8 +1637,29 @@
                 "type": "str"
               }
             ],
-            "outputs": [],
+            "outputs": [
+              {
+                "name": "file_predict_actual_csv",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_actual_fig",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_backbone_fig",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_meta_fig",
+                "type": "str"
+              }
+            ],
             "confs": [
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
               {
                 "name": "conf_vlab_name",
                 "assignation": "conf_vlab_name = 'ECVs'"
@@ -1590,10 +1667,6 @@
               {
                 "name": "conf_minio_user_local_flog",
                 "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
-              },
-              {
-                "name": "conf_minio_user_local_data",
-                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
               }
             ],
             "params": [
@@ -1616,13 +1689,13 @@
             "secrets": [],
             "title": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
             "description": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
-            "created": "2026-08-13T10:10:42.889231Z",
-            "modified": "2026-08-13T10:10:43.811500Z",
-            "version": 2,
+            "created": "2026-08-13T11:08:07.680785Z",
+            "modified": "2026-08-13T11:08:08.513745Z",
+            "version": 4,
             "template_format": "v1",
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-prediction-quan-pan-lifewatch-eu:806379e",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-prediction-quan-pan-lifewatch-eu:929d9a1",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/a91c00f36eaab344bf29f5664665dd730288c436/ecvs-ml-prediction-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/45f3f0fee2dea49dd00b627a7da4d961d8e534ea/ecvs-ml-prediction-quan-pan-lifewatch-eu",
             "is_draft": false
           }
         },
@@ -1985,47 +2058,47 @@
           "portId": "file_weather"
         }
       },
-      "6d63276a-b84e-4dd3-9258-fbb7b2c2e231": {
-        "id": "6d63276a-b84e-4dd3-9258-fbb7b2c2e231",
+      "72147f1a-20a7-41b3-9691-a56543128ec4": {
+        "id": "72147f1a-20a7-41b3-9691-a56543128ec4",
         "from": {
           "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
           "portId": "file_support_dataset"
         },
         "to": {
-          "nodeId": "fd603830-7c14-436d-864b-ce976566d262",
+          "nodeId": "7abf7829-6119-45a0-be27-f2102f6ac8e9",
           "portId": "file_inpput_dataset"
         }
       },
-      "7d387912-1d0a-44c3-8925-efd37cc765e4": {
-        "id": "7d387912-1d0a-44c3-8925-efd37cc765e4",
+      "e9a76d15-9810-4797-8991-0bbc0df7dac9": {
+        "id": "e9a76d15-9810-4797-8991-0bbc0df7dac9",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_actual"
         },
         "to": {
-          "nodeId": "fd603830-7c14-436d-864b-ce976566d262",
+          "nodeId": "7abf7829-6119-45a0-be27-f2102f6ac8e9",
           "portId": "file_model_actual"
         }
       },
-      "94a4d291-e02b-4c53-8da1-298937e0628c": {
-        "id": "94a4d291-e02b-4c53-8da1-298937e0628c",
+      "95809c5e-50cd-4ce2-bd10-3259061dfce0": {
+        "id": "95809c5e-50cd-4ce2-bd10-3259061dfce0",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_backbone"
         },
         "to": {
-          "nodeId": "fd603830-7c14-436d-864b-ce976566d262",
+          "nodeId": "7abf7829-6119-45a0-be27-f2102f6ac8e9",
           "portId": "file_model_backbone"
         }
       },
-      "5030cc4f-299e-44c0-b294-1ae025a1837c": {
-        "id": "5030cc4f-299e-44c0-b294-1ae025a1837c",
+      "e3d5312b-8b9d-43c4-8b87-e124f97cc98e": {
+        "id": "e3d5312b-8b9d-43c4-8b87-e124f97cc98e",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_meta"
         },
         "to": {
-          "nodeId": "fd603830-7c14-436d-864b-ce976566d262",
+          "nodeId": "7abf7829-6119-45a0-be27-f2102f6ac8e9",
           "portId": "file_model_meta"
         }
       }

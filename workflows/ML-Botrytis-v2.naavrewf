@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": 75.86,
-      "y": 143.57
+      "x": 173.39,
+      "y": 179.87
     },
-    "scale": 0.501,
+    "scale": 0.44,
     "nodes": {
       "1ac2c8cc-e978-4bbb-816d-2b0345085512": {
         "id": "1ac2c8cc-e978-4bbb-816d-2b0345085512",
@@ -1352,11 +1352,11 @@
           "height": 209
         }
       },
-      "8175ee96-66f3-4bf7-bfab-f14d111ae520": {
-        "id": "8175ee96-66f3-4bf7-bfab-f14d111ae520",
+      "bb7c8c42-ad10-4cc9-8634-0237d54859d2": {
+        "id": "bb7c8c42-ad10-4cc9-8634-0237d54859d2",
         "position": {
-          "x": 2320.5825479748178,
-          "y": 648.8155339805826
+          "x": 2294.0918407325976,
+          "y": 633.5928143712574
         },
         "orientation": 0,
         "type": "workflow-cell",
@@ -1408,11 +1408,59 @@
               "x": -2,
               "y": 91
             }
+          },
+          "file_predict_actual_csv": {
+            "id": "file_predict_actual_csv",
+            "type": "right",
+            "properties": {
+              "color": "#79d27e",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "file_predict_actual_fig": {
+            "id": "file_predict_actual_fig",
+            "type": "right",
+            "properties": {
+              "color": "#2d2fd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "file_predict_backbone_fig": {
+            "id": "file_predict_backbone_fig",
+            "type": "right",
+            "properties": {
+              "color": "#4440bf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "file_predict_meta_fig": {
+            "id": "file_predict_meta_fig",
+            "type": "right",
+            "properties": {
+              "color": "#931f55",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/94f64101-c9db-4e41-9f0d-487675dfddaa/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0dcb443e-efca-46f7-ba70-ca9f8c98ea24/",
             "owner": "quan.pan@lifewatch.eu",
             "virtual_lab": "ecvs",
             "shared_with_scopes": [],
@@ -1425,6 +1473,14 @@
               {
                 "version": 2,
                 "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/94f64101-c9db-4e41-9f0d-487675dfddaa/"
+              },
+              {
+                "version": 3,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/88eff1ab-9f6f-4f8c-9a9f-7e7141f84824/"
+              },
+              {
+                "version": 4,
+                "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/0dcb443e-efca-46f7-ba70-ca9f8c98ea24/"
               }
             ],
             "base_container_image": {
@@ -1496,8 +1552,29 @@
                 "type": "str"
               }
             ],
-            "outputs": [],
+            "outputs": [
+              {
+                "name": "file_predict_actual_csv",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_actual_fig",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_backbone_fig",
+                "type": "str"
+              },
+              {
+                "name": "file_predict_meta_fig",
+                "type": "str"
+              }
+            ],
             "confs": [
+              {
+                "name": "conf_minio_user_local_data",
+                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
+              },
               {
                 "name": "conf_vlab_name",
                 "assignation": "conf_vlab_name = 'ECVs'"
@@ -1505,10 +1582,6 @@
               {
                 "name": "conf_minio_user_local_flog",
                 "assignation": "conf_minio_user_local_flog = os.path.join(os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name), 'log.md')"
-              },
-              {
-                "name": "conf_minio_user_local_data",
-                "assignation": "conf_minio_user_local_data = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs', param_workflow_name)"
               }
             ],
             "params": [
@@ -1531,13 +1604,13 @@
             "secrets": [],
             "title": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
             "description": "ecvs-ml-prediction-quan-pan-lifewatch-eu",
-            "created": "2026-08-13T10:10:42.889231Z",
-            "modified": "2026-08-13T10:10:43.811500Z",
-            "version": 2,
+            "created": "2026-08-13T11:08:07.680785Z",
+            "modified": "2026-08-13T11:08:08.513745Z",
+            "version": 4,
             "template_format": "v1",
-            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-prediction-quan-pan-lifewatch-eu:806379e",
+            "container_image": "ghcr.io/naavre/cells-vl-ecvs/ecvs-ml-prediction-quan-pan-lifewatch-eu:929d9a1",
             "kernel": "ipython",
-            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/a91c00f36eaab344bf29f5664665dd730288c436/ecvs-ml-prediction-quan-pan-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-ecvs/tree/45f3f0fee2dea49dd00b627a7da4d961d8e534ea/ecvs-ml-prediction-quan-pan-lifewatch-eu",
             "is_draft": false
           }
         },
@@ -1867,47 +1940,47 @@
           "portId": "data_response_len"
         }
       },
-      "19273c2f-3ebe-41db-b20f-f530cd5b0c4d": {
-        "id": "19273c2f-3ebe-41db-b20f-f530cd5b0c4d",
+      "cc1c6650-40c6-4bcc-9b33-4f2f8def3adc": {
+        "id": "cc1c6650-40c6-4bcc-9b33-4f2f8def3adc",
         "from": {
           "nodeId": "bf266898-f741-42d5-a678-0abe51c4fced",
           "portId": "file_support_dataset"
         },
         "to": {
-          "nodeId": "8175ee96-66f3-4bf7-bfab-f14d111ae520",
+          "nodeId": "bb7c8c42-ad10-4cc9-8634-0237d54859d2",
           "portId": "file_inpput_dataset"
         }
       },
-      "8789800f-fe9d-46e6-bacd-56df3ea2fe44": {
-        "id": "8789800f-fe9d-46e6-bacd-56df3ea2fe44",
+      "cdec0b5c-7ec7-41f0-b169-720b0739ad3b": {
+        "id": "cdec0b5c-7ec7-41f0-b169-720b0739ad3b",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_actual"
         },
         "to": {
-          "nodeId": "8175ee96-66f3-4bf7-bfab-f14d111ae520",
+          "nodeId": "bb7c8c42-ad10-4cc9-8634-0237d54859d2",
           "portId": "file_model_actual"
         }
       },
-      "6353f1f6-5eab-47ea-a522-40912b61f8c9": {
-        "id": "6353f1f6-5eab-47ea-a522-40912b61f8c9",
+      "81fbc23f-f41b-4858-8e12-e97000ee49ae": {
+        "id": "81fbc23f-f41b-4858-8e12-e97000ee49ae",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_backbone"
         },
         "to": {
-          "nodeId": "8175ee96-66f3-4bf7-bfab-f14d111ae520",
+          "nodeId": "bb7c8c42-ad10-4cc9-8634-0237d54859d2",
           "portId": "file_model_backbone"
         }
       },
-      "7877025a-ede5-4bef-972f-a79ecb0be107": {
-        "id": "7877025a-ede5-4bef-972f-a79ecb0be107",
+      "161a5258-866e-4fe7-9cc3-3796ec4da8cb": {
+        "id": "161a5258-866e-4fe7-9cc3-3796ec4da8cb",
         "from": {
           "nodeId": "88ba726e-eac4-4a52-b82e-962b2859029b",
           "portId": "file_model_meta"
         },
         "to": {
-          "nodeId": "8175ee96-66f3-4bf7-bfab-f14d111ae520",
+          "nodeId": "bb7c8c42-ad10-4cc9-8634-0237d54859d2",
           "portId": "file_model_meta"
         }
       }
