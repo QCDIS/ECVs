@@ -1,0 +1,2018 @@
+{
+  "chart": {
+    "offset": {
+      "x": 268.6,
+      "y": 333.86
+    },
+    "scale": 0.25,
+    "nodes": {
+      "ecvs-01-ecvs-variable-input": {
+        "id": "ecvs-01-ecvs-variable-input",
+        "position": {
+          "x": 0,
+          "y": 801.4925373134326
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "variable_name": {
+            "id": "variable_name",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 169
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 195
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 221
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/1e718cd0-312a-4bce-ae62-4acddad738d9/",
+            "title": "ecvs-variable-input-v2-user",
+            "description": "Step 1 (v2): take the variable the user wants (any of the 55 GCOS ECVs by name, such as 'surface temperature' or 'ozone', or an EXV code) and the region, period and height window, and check them.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-variable-input-v2-user:eb3b8784a3687f2c",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "datetime",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "variable_name",
+                "type": "str"
+              },
+              {
+                "name": "lon_min",
+                "type": "float"
+              },
+              {
+                "name": "lon_max",
+                "type": "float"
+              },
+              {
+                "name": "lat_min",
+                "type": "float"
+              },
+              {
+                "name": "lat_max",
+                "type": "float"
+              },
+              {
+                "name": "start_date",
+                "type": "str"
+              },
+              {
+                "name": "end_date",
+                "type": "str"
+              },
+              {
+                "name": "height_min",
+                "type": "float"
+              },
+              {
+                "name": "height_max",
+                "type": "float"
+              }
+            ],
+            "confs": [],
+            "params": [
+              {
+                "name": "param_variable_name",
+                "type": "str",
+                "default_value": "surface temperature",
+                "ui": null
+              },
+              {
+                "name": "param_lon_min",
+                "type": "float",
+                "default_value": "0.0",
+                "ui": null
+              },
+              {
+                "name": "param_lon_max",
+                "type": "float",
+                "default_value": "20.0",
+                "ui": null
+              },
+              {
+                "name": "param_lat_min",
+                "type": "float",
+                "default_value": "45.0",
+                "ui": null
+              },
+              {
+                "name": "param_lat_max",
+                "type": "float",
+                "default_value": "55.0",
+                "ui": null
+              },
+              {
+                "name": "param_start_date",
+                "type": "str",
+                "default_value": "2024-01-01",
+                "ui": null
+              },
+              {
+                "name": "param_end_date",
+                "type": "str",
+                "default_value": "2024-12-31",
+                "ui": null
+              },
+              {
+                "name": "param_height_min",
+                "type": "float",
+                "default_value": "0.0",
+                "ui": null
+              },
+              {
+                "name": "param_height_max",
+                "type": "float",
+                "default_value": "200.0",
+                "ui": null
+              }
+            ],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 235
+        }
+      },
+      "ecvs-02-ecvs-nerc-exv-search": {
+        "id": "ecvs-02-ecvs-nerc-exv-search",
+        "position": {
+          "x": 444.8260246753848,
+          "y": 57.64521048010731
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "variable_name": {
+            "id": "variable_name",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "exv_code": {
+            "id": "exv_code",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 17
+            }
+          },
+          "file_exv": {
+            "id": "file_exv",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 43
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/9ae56bff-9b8e-4d15-ae7b-a5e0c95a77ab/",
+            "title": "ecvs-nerc-exv-search-v2-user",
+            "description": "Step 2 (v2): find the Essential Variable in the NERC Vocabulary Server (EXV) and its CF standard names, ranked: I-ADOPT -> P01 -> P07, P02 -> P07, then the label or object of interest for EXVs NVS has not decomposed.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-nerc-exv-search-v2-user:b90c0b9ea8765df1",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "re",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "time",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "variable_name",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "exv_code",
+                "type": "str"
+              },
+              {
+                "name": "file_exv",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_SERVICE_URL_NERC_VOCAB",
+                "assignation": "conf_SERVICE_URL_NERC_VOCAB = 'http://vocab.nerc.ac.uk/collection'"
+              },
+              {
+                "name": "conf_SERVICE_URL_NERC_SPARQL",
+                "assignation": "conf_SERVICE_URL_NERC_SPARQL = 'https://vocab.nerc.ac.uk/sparql/sparql'"
+              },
+              {
+                "name": "conf_label_spelling",
+                "assignation": "conf_label_spelling = {'vapour': 'vapor', 'colour': 'color', 'sulphate': 'sulfate', 'sulphur': 'sulfur', 'aerosols': 'aerosol'}"
+              },
+              {
+                "name": "conf_label_qualifiers",
+                "assignation": "conf_label_qualifiers = ['surface', 'upper', 'subsurface', 'and', 'other', 'the', 'of', 'from', 'properties', 'budget', 'earth', 'ocean', 'anthropogenic', 'ad']"
+              },
+              {
+                "name": "conf_iadopt_media",
+                "assignation": "conf_iadopt_media = ['water body', 'air', 'atmosphere', 'sea water', 'water']"
+              },
+              {
+                "name": "conf_exv_label_hints",
+                "assignation": "conf_exv_label_hints = {'EXV008': [['wind', 'speed'], ['wind', 'direction'], ['eastward', 'wind'], ['northward', 'wind']], 'EXV031': [['cfc11'], ['cfc12'], ['cfc113'], ['sulfur', 'hexafluoride']], 'EXV034': [['phytoplankton'], ['zooplankton']], 'EXV038': [['river'], ['rivers']], 'EXV042': [['land', 'ice']], 'EXV043': [['ice', 'sheet'], ['ice', 'shelf']], 'EXV045': [['photosynthetic', 'absorbed']], 'EXV049': [['vegetation', 'carbon', 'content']], 'EXV053': [['anthropogenic', 'emission']], 'EXV055': [['irrigation']]}"
+              },
+              {
+                "name": "conf_iadopt_matrix_words",
+                "assignation": "conf_iadopt_matrix_words = {'water body': ['water']}"
+              },
+              {
+                "name": "conf_cf_exclude",
+                "assignation": "conf_cf_exclude = ['stagnation_air_temperature', 'platform_speed_wrt_air', 'platform_speed_wrt_ground', 'barometric_altitude', 'gps_altitude', 'altitude_wrt_radar', 'status_flag']"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "ecvs-03-ecvs-ri-discovery": {
+        "id": "ecvs-03-ecvs-ri-discovery",
+        "position": {
+          "x": 891.1381174622234,
+          "y": 377.06667898895626
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "exv_code": {
+            "id": "exv_code",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "file_exv": {
+            "id": "file_exv",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "file_sources": {
+            "id": "file_sources",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          },
+          "file_discovery": {
+            "id": "file_discovery",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 143
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/ce30ce64-5e1f-4254-bad3-c09ff1da95c5/",
+            "title": "ecvs-ri-discovery-v2-user",
+            "description": "Step 3 (v2): find the research-infrastructure columns on the MARIS Beacon nodes whose standard_name is one of the CF names, keep ambient data only, and check each has data in the window; one source per RI and CF name.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-ri-discovery-v2-user:4e9b37bab7dfd63f",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "re",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "time",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "importlib",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "ThreadPoolExecutor",
+                "module": "concurrent.futures",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "exv_code",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_exv",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "start_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "end_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_sources",
+                "type": "str"
+              },
+              {
+                "name": "file_discovery",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_ri_matrix_rules",
+                "assignation": "conf_ri_matrix_rules = {'exclude': ['instrument'], 'only': {'air_temperature': ['met'], 'air_pressure': ['met'], 'relative_humidity': ['met'], 'wind_speed': ['met'], 'wind_from_direction': ['met'], 'wind_speed_of_gust': ['met'], 'lwe_thickness_of_precipitation_amount': ['met']}}"
+              },
+              {
+                "name": "conf_ri_registry",
+                "assignation": "conf_ri_registry = [{'ri': 'ACTRIS', 'node': 'https://beacon-iriscc.maris.nl', 'table': 'actris-in-situ', 'time': 'time', 'latitude': '.geospatial_lat_min', 'longitude': '.geospatial_lon_min', 'height': '.ebas_station_altitude', 'height_is_text': True, 'site': '.ebas_station_code', 'matrix': '{column}.ebas_matrix', 'screen_all': False, 'token_required': False}, {'ri': 'ACTRIS', 'node': 'https://beacon-iriscc.maris.nl', 'table': 'actris-nrt', 'time': 'time', 'latitude': '.geospatial_lat_min', 'longitude': '.geospatial_lon_min', 'height': '.ebas_station_altitude', 'height_is_text': True, 'site': '.ebas_station_code', 'matrix': '{column}.ebas_matrix', 'screen_all': True, 'token_required': False}, {'ri': 'IAGOS', 'node': 'https://beacon-iriscc.maris.nl', 'table': 'iagos-l2', 'time': 'UTC_time', 'latitude': 'lat', 'longitude': 'lon', 'height': 'baro_alt_AC', 'height_is_text': False, 'site': 'flight_name', 'matrix': None, 'screen_all': True, 'token_required': False}, {'ri': 'IAGOS', 'node': 'https://beacon-iriscc.maris.nl', 'table': 'iagos-l1', 'time': 'UTC_time', 'latitude': 'lat', 'longitude': 'lon', 'height': 'baro_alt_AC', 'height_is_text': False, 'site': 'flight_name', 'matrix': None, 'screen_all': True, 'token_required': False}, {'ri': 'Argo', 'node': 'https://beacon-argo.maris.nl', 'table': 'argo', 'time': 'JULD', 'latitude': 'LATITUDE', 'longitude': 'LONGITUDE', 'height': 'PRES', 'height_is_text': False, 'site': 'PLATFORM_NUMBER', 'matrix': None, 'screen_all': False, 'token_required': True}, {'ri': 'CDI', 'node': 'https://beacon-cdi.maris.nl', 'table': 'default', 'time': 'TIME', 'latitude': 'LATITUDE', 'longitude': 'LONGITUDE', 'height': 'DEPTH', 'height_is_text': False, 'site': 'SDN_STATION', 'matrix': None, 'screen_all': False, 'token_required': True}]"
+              },
+              {
+                "name": "conf_max_sources",
+                "assignation": "conf_max_sources = 12"
+              },
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 261
+        }
+      },
+      "ecvs-04-ecvs-data-download": {
+        "id": "ecvs-04-ecvs-data-download",
+        "position": {
+          "x": 1570.8312924541362,
+          "y": 539.0462547941414
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "exv_code": {
+            "id": "exv_code",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "file_sources": {
+            "id": "file_sources",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "file_downloads": {
+            "id": "file_downloads",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 130
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/55548fee-06dc-41fc-ab1e-ce2aef0b2a33/",
+            "title": "ecvs-data-download-v2-user",
+            "description": "Step 4 (v2): download every selected research-infrastructure source in the window from Beacon, one CSV per source and CF name.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-data-download-v2-user:40fcd4d7f795d679",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "re",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "time",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "importlib",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "exv_code",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_sources",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "start_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "end_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_downloads",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_ri_matrix_rules",
+                "assignation": "conf_ri_matrix_rules = {'exclude': ['instrument'], 'only': {'air_temperature': ['met'], 'air_pressure': ['met'], 'relative_humidity': ['met'], 'wind_speed': ['met'], 'wind_from_direction': ['met'], 'wind_speed_of_gust': ['met'], 'lwe_thickness_of_precipitation_amount': ['met']}}"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 261
+        }
+      },
+      "ecvs-05-ecvs-data-validation": {
+        "id": "ecvs-05-ecvs-data-validation",
+        "position": {
+          "x": 2041.791044776118,
+          "y": 47.76119402985074
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "exv_code": {
+            "id": "exv_code",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "file_exv": {
+            "id": "file_exv",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "file_downloads": {
+            "id": "file_downloads",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "file_validated": {
+            "id": "file_validated",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "file_validation": {
+            "id": "file_validation",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "file_map": {
+            "id": "file_map",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "file_timeseries": {
+            "id": "file_timeseries",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "file_histogram": {
+            "id": "file_histogram",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/86904692-cc84-46a7-a9b7-05cc351eb913/",
+            "title": "ecvs-data-validation-v2-user",
+            "description": "Step 5 (v2): convert to canonical units, flag fill values and implausible values, and plot the datasets per CF name (map, daily time series, value distribution) with a validation table.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-data-validation-v2-user:60de7751d4953d79",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "math",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "exv_code",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_exv",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_downloads",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_validated",
+                "type": "str"
+              },
+              {
+                "name": "file_validation",
+                "type": "str"
+              },
+              {
+                "name": "file_map",
+                "type": "str"
+              },
+              {
+                "name": "file_timeseries",
+                "type": "str"
+              },
+              {
+                "name": "file_histogram",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_fill_values",
+                "assignation": "conf_fill_values = [9999.99, 9999.9, 99999.0, -9999.0, -999.0, -999.9, -9726.75, 9.96921e+36]"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              },
+              {
+                "name": "conf_valid_ranges",
+                "assignation": "conf_valid_ranges = {'air_temperature': ['degC', -90.0, 60.0], 'surface_temperature': ['degC', -90.0, 70.0], 'sea_water_temperature': ['degC', -3.0, 40.0], 'sea_surface_temperature': ['degC', -3.0, 40.0], 'air_pressure': ['hPa', 100.0, 1100.0], 'surface_air_pressure': ['hPa', 400.0, 1100.0], 'relative_humidity': ['%', 0.0, 105.0], 'wind_speed': ['m/s', 0.0, 80.0], 'wind_speed_of_gust': ['m/s', 0.0, 100.0], 'wind_from_direction': ['deg', 0.0, 360.0], 'eastward_wind': ['m/s', -150.0, 150.0], 'northward_wind': ['m/s', -150.0, 150.0], 'lwe_thickness_of_precipitation_amount': ['mm', 0.0, 1000.0], 'mole_fraction_of_ozone_in_air': ['ppb', 0.0, 15000.0], 'mole_fraction_of_carbon_monoxide_in_air': ['ppb', 0.0, 10000.0], 'mole_fraction_of_carbon_dioxide_in_air': ['ppm', 300.0, 700.0], 'mole_fraction_of_methane_in_air': ['ppb', 1000.0, 5000.0], 'mole_fraction_of_nitrogen_dioxide_in_air': ['ppb', 0.0, 1000.0], 'mole_fraction_of_water_vapor_in_air': ['ppm', 0.0, 50000.0]}"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 131
+        }
+      },
+      "ecvs-06-ecvs-combine-datasets": {
+        "id": "ecvs-06-ecvs-combine-datasets",
+        "position": {
+          "x": 2738.5074626865708,
+          "y": 617.9104477611938
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "exv_code": {
+            "id": "exv_code",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "file_exv": {
+            "id": "file_exv",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "file_discovery": {
+            "id": "file_discovery",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "file_validated": {
+            "id": "file_validated",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "file_validation": {
+            "id": "file_validation",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          },
+          "file_map": {
+            "id": "file_map",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 143
+            }
+          },
+          "file_timeseries": {
+            "id": "file_timeseries",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 169
+            }
+          },
+          "file_histogram": {
+            "id": "file_histogram",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 195
+            }
+          },
+          "start_date": {
+            "id": "start_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 221
+            }
+          },
+          "end_date": {
+            "id": "end_date",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 247
+            }
+          },
+          "lon_min": {
+            "id": "lon_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 273
+            }
+          },
+          "lon_max": {
+            "id": "lon_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 299
+            }
+          },
+          "lat_min": {
+            "id": "lat_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 325
+            }
+          },
+          "lat_max": {
+            "id": "lat_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 351
+            }
+          },
+          "height_min": {
+            "id": "height_min",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 377
+            }
+          },
+          "height_max": {
+            "id": "height_max",
+            "type": "left",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 403
+            }
+          },
+          "file_combined": {
+            "id": "file_combined",
+            "type": "right",
+            "properties": {
+              "color": "#2dd269",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 208
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "http://localhost:29800/workflow-cells/7edb0f25-a3b0-47a7-93f2-f8dbac7a08a4/",
+            "title": "ecvs-combine-datasets-v2-user",
+            "description": "Step 6 (v2): combine the valid rows of every source into one CSV, with a monthly summary, provenance (including why there is no data, if so) and a manifest of all result files.",
+            "owner": "user",
+            "virtual_lab": "test-virtual-lab-1",
+            "container_image": "host.docker.internal:29500/naavre-cells/7ac1b8d7010bb6cd/9a1cef6bb6055b6a/ecvs-combine-datasets-v2-user:df6a43a5ab566330",
+            "base_container_image": {
+              "build": "NEW-Registry:5000/naavre-bases/ecvs-cell-build:v1",
+              "runtime": "NEW-Registry:5000/naavre-bases/naavre-fl-vanilla-cell-runtime:v0.1.11"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "json",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "hashlib",
+                "module": "",
+                "asname": null
+              }
+            ],
+            "inputs": [
+              {
+                "name": "exv_code",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_exv",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_discovery",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_validated",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_validation",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_map",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_timeseries",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "file_histogram",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "start_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "end_date",
+                "type": "str",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lon_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "lat_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_min",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              },
+              {
+                "name": "height_max",
+                "type": "float",
+                "default_value": null,
+                "ui": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "file_combined",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_local_root",
+                "assignation": "conf_minio_user_local_root = os.path.join(os.path.join('/', 'home', 'jovyan', 'Cloud Storage'), 'naa-vre-user-data', 'ECVs')"
+              },
+              {
+                "name": "conf_delimiter_csv",
+                "assignation": "conf_delimiter_csv = ','"
+              },
+              {
+                "name": "conf_vlab_name",
+                "assignation": "conf_vlab_name = 'ECVs'"
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "kernel": "ipython",
+            "template_format": "v1"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 417
+        }
+      }
+    },
+    "links": {
+      "link-1": {
+        "id": "link-1",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "variable_name"
+        },
+        "to": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "variable_name"
+        }
+      },
+      "link-2": {
+        "id": "link-2",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "exv_code"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "exv_code"
+        }
+      },
+      "link-3": {
+        "id": "link-3",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "file_exv"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "file_exv"
+        }
+      },
+      "link-4": {
+        "id": "link-4",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "lon_min"
+        }
+      },
+      "link-5": {
+        "id": "link-5",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "lon_max"
+        }
+      },
+      "link-6": {
+        "id": "link-6",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "lat_min"
+        }
+      },
+      "link-7": {
+        "id": "link-7",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "lat_max"
+        }
+      },
+      "link-8": {
+        "id": "link-8",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "start_date"
+        }
+      },
+      "link-9": {
+        "id": "link-9",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "end_date"
+        }
+      },
+      "link-10": {
+        "id": "link-10",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_min"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "height_min"
+        }
+      },
+      "link-11": {
+        "id": "link-11",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_max"
+        },
+        "to": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "height_max"
+        }
+      },
+      "link-12": {
+        "id": "link-12",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "exv_code"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "exv_code"
+        }
+      },
+      "link-13": {
+        "id": "link-13",
+        "from": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "file_sources"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "file_sources"
+        }
+      },
+      "link-14": {
+        "id": "link-14",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "lon_min"
+        }
+      },
+      "link-15": {
+        "id": "link-15",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "lon_max"
+        }
+      },
+      "link-16": {
+        "id": "link-16",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "lat_min"
+        }
+      },
+      "link-17": {
+        "id": "link-17",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "lat_max"
+        }
+      },
+      "link-18": {
+        "id": "link-18",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "start_date"
+        }
+      },
+      "link-19": {
+        "id": "link-19",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "end_date"
+        }
+      },
+      "link-20": {
+        "id": "link-20",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_min"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "height_min"
+        }
+      },
+      "link-21": {
+        "id": "link-21",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_max"
+        },
+        "to": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "height_max"
+        }
+      },
+      "link-22": {
+        "id": "link-22",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "exv_code"
+        },
+        "to": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "exv_code"
+        }
+      },
+      "link-23": {
+        "id": "link-23",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "file_exv"
+        },
+        "to": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_exv"
+        }
+      },
+      "link-24": {
+        "id": "link-24",
+        "from": {
+          "nodeId": "ecvs-04-ecvs-data-download",
+          "portId": "file_downloads"
+        },
+        "to": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_downloads"
+        }
+      },
+      "link-25": {
+        "id": "link-25",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "exv_code"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "exv_code"
+        }
+      },
+      "link-26": {
+        "id": "link-26",
+        "from": {
+          "nodeId": "ecvs-02-ecvs-nerc-exv-search",
+          "portId": "file_exv"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_exv"
+        }
+      },
+      "link-27": {
+        "id": "link-27",
+        "from": {
+          "nodeId": "ecvs-03-ecvs-ri-discovery",
+          "portId": "file_discovery"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_discovery"
+        }
+      },
+      "link-28": {
+        "id": "link-28",
+        "from": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_validated"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_validated"
+        }
+      },
+      "link-29": {
+        "id": "link-29",
+        "from": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_validation"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_validation"
+        }
+      },
+      "link-30": {
+        "id": "link-30",
+        "from": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_map"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_map"
+        }
+      },
+      "link-31": {
+        "id": "link-31",
+        "from": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_timeseries"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_timeseries"
+        }
+      },
+      "link-32": {
+        "id": "link-32",
+        "from": {
+          "nodeId": "ecvs-05-ecvs-data-validation",
+          "portId": "file_histogram"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "file_histogram"
+        }
+      },
+      "link-33": {
+        "id": "link-33",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "start_date"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "start_date"
+        }
+      },
+      "link-34": {
+        "id": "link-34",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "end_date"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "end_date"
+        }
+      },
+      "link-35": {
+        "id": "link-35",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_min"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "lon_min"
+        }
+      },
+      "link-36": {
+        "id": "link-36",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lon_max"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "lon_max"
+        }
+      },
+      "link-37": {
+        "id": "link-37",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_min"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "lat_min"
+        }
+      },
+      "link-38": {
+        "id": "link-38",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "lat_max"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "lat_max"
+        }
+      },
+      "link-39": {
+        "id": "link-39",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_min"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "height_min"
+        }
+      },
+      "link-40": {
+        "id": "link-40",
+        "from": {
+          "nodeId": "ecvs-01-ecvs-variable-input",
+          "portId": "height_max"
+        },
+        "to": {
+          "nodeId": "ecvs-06-ecvs-combine-datasets",
+          "portId": "height_max"
+        }
+      }
+    },
+    "properties": {
+      "params": []
+    },
+    "metadata": {
+      "version": "1.1"
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
